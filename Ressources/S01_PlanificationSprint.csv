@@ -1,0 +1,24 @@
+Semaine,47,48,49,50,51,52,1,2,3,4,5,6,7,8
+Sprint,1,2,3,4,5,,,6,7,8,9,10,11,12
+Sujet de cours,Active Directory,"Securité 
+SSH","Suivi de parc
+Suivi d'incident 
+Services bureaucratiques","PareFeu 
+VPN","Stockage Avancé 
+Sauvegarde & archivage",PAUSE,PAUSE,"Journalisation 
+Supervision 
+Sécurisation de système","Messagerie 
+Déploiement automatique de Windows","Gestion de MàJ 
+WSUS 
+Gestionnaire de paquets","HTTP et service Web 
+VOiP","Aspect Juridique 
+Wifi 
+Radius","Cloud computing 
+IDS/IPS",-
+Objectif 1 :,Planification des sprints,Mettre en place un serveur Active Directory et un machine cliente,Mettre en place des GPO,Gérer les communications SSH et WinRM,Mettre en place deux Pare-feu,,,Mettre en place un serveur NAS,Mettre en place un serveur Web,Mettre en place un serveur SMTP,Gérer les mises à jour,Mettre en place un serveur PABX,Mettre en place un réseau Wifi sécurisé,Finaliser le projet et la documentation
+Détail,,,,Afin de mieux gérer la prise de main à distance,Afin de créer une DMZ autour des serveurs,,,Pour le stockage de données. Disque en miroir pour la redondance,Afin d'héberger le site Ekolocast.fr,Pour avoir une messagerie interne,,Afin de créer une téléphonie interne,,
+Objectif 2 :,Schéma prévisionnel de réseau,"Créer les groupes, OU et utilisateurs",Mettre en place un deuxième serveur AD,Mettre en place GLPI,Mettre en place un serveur VPN,,,Gérer les accès au NAS,,Mettre en place une messagerie interne,,Mettre en place une passelle VoIP,,
+Détail,,Selon la convention de nommage,Afin de séparer les 5 rôles FSMO,Afin de gérer les incidents et le parc,Dans le but d'avoir le télétravail possible. En full tunnelling,,,,,Carnet d'adresse,,Pour avoir une passerelle vers l'extérieur,,
+Objectif 3 :,,Paramétrer les routeurs et les switch,Mettre en place un anti-virus,,,,,Mettre en place les sauvegardes,,,,,,
+Détail,,,,,,,,,,,,,,
+,,,,,DEMO,,,,,DEMO,,,,DEMO
