@@ -1,15 +1,24 @@
-| **Serveur** | **VLAN 10** | **192.168.10.0/24** |
+| **Serveur LAN** | **VLAN 10** | **192.168.10.0/28** |
 |:---:|:---:|:---:|
 | Adresse IP | Nom | Commentaire |
 | 192.168.10.0 |  | Adresse Réservée |
-| 192.168.10.1 |  |  |
-| 192.168.10.2 |  |  |
-| 192.168.10.3 |  |  |
-| 192.168.10.4 |  |  |
-| 192.168.10.5 |  |  |
-| 192.168.10.6 |  |  |
-| 192.168.10.253 | Adresse du routeur |  |
-| 192.168.10.254 | Adresse de Broadcast |  |  
+| 192.168.10.1 | Addax  |  |
+| 192.168.10.2 | Axolotl |  |
+| 192.168.10.3 | Douc |  |
+| 192.168.10.4 | Nausique |  |
+| 192.168.10.5 | Pangolin |  |
+| 192.168.10.14 | Adresse du routeur |  |
+| 192.168.10.15 | Adresse de Broadcast |  |  
+
+| **Serveur DMZ** | **VLAN 10 bis** | **192.168.10.16/28** |
+|:---:|:---:|:---:|
+| Adresse IP | Nom | Commentaire |
+| 192.168.10.16 |  | Adresse Réservée |
+| 192.168.10.17 | Wombat  |  |
+| 192.168.10.18 | Saloa |  |
+| 192.168.10.19 | Varecia |  |
+| 192.168.10.30 | Adresse du routeur |  |
+| 192.168.10.31 | Adresse de Broadcast |  |  
 
 | **Communication** | **VLAN 11** | **192.168.11.0/24** |
 |:---:|:---:|:---:|
