@@ -1,7 +1,7 @@
 
 internet réseau : ??\
-réseau routeur 1 et 2 : 192.168.30.0/24\
-réseau R2 et L3 : 192.168.31.0/24\
+réseau routeur 1 et 2 : 192.168.30.0/30\
+réseau R2 et L3 : 192.168.31.0/30\
 **R1**
 
 | Réseau        | masque          | passerelle     | interface      |
