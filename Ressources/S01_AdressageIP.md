@@ -1,112 +1,114 @@
-| **Serveur LAN** | **VLAN 10** | **192.168.10.0/28** |
-|:---:|:---:|:---:|
-| Adresse IP | Nom | Commentaire |
-| 192.168.10.0 |  | Adresse Réservée |
-| 192.168.10.1 | Addax  |  |
-| 192.168.10.2 | Axolotl |  |
-| 192.168.10.3 | Douc |  |
-| 192.168.10.4 | Nausique |  |
-| 192.168.10.5 | Pangolin |  |
-| 192.168.10.14 | Adresse du routeur |  |
-| 192.168.10.15 | Adresse de Broadcast |  |  
-
-| **Serveur DMZ** | **VLAN 10 bis** | **192.168.10.16/28** |
-|:---:|:---:|:---:|
-| Adresse IP | Nom | Commentaire |
-| 192.168.10.16 |  | Adresse Réservée |
-| 192.168.10.17 | Wombat  |  |
-| 192.168.10.18 | Saloa |  |
-| 192.168.10.19 | Varecia |  |
-| 192.168.10.30 | Adresse du routeur |  |
-| 192.168.10.31 | Adresse de Broadcast |  |  
-
-| **Communication** | **VLAN 11** | **192.168.11.0/24** |
-|:---:|:---:|:---:|
-| Adresse IP | Nom | Commentaire |
-| 192.168.11.0 |  | Adresse Réservée |
-| 192.168.11.1 à 240|  | Plage DHCP Client |
-| 192.168.11.241 à 252|  | Plage réservée Équipement |
-| 192.168.11.253 | Adresse du routeur |  |
-| 192.168.11.254 | Adresse de Broadcast |  |
-
-| **R&D** | **VLAN 12** | **192.168.12.0/24** |
-|:---:|:---:|:---:|
-| Adresse IP | Nom | Commentaire |
-| 192.168.12.0 |  | Adresse Réservée |
-| 192.168.12.1 à 240|  | Plage DHCP Client |
-| 192.168.12.241 à 252|  | Plage réservée Équipement |
-| 192.168.12.253 | Adresse du routeur |  |
-| 192.168.12.254 | Adresse de Broadcast |  |
+Ekoloclast - 172.24.0.0/16
 
 
-| **DSI** | **VLAN 13** | **192.168.13.0/24** |
+| **Serveur LAN** | **VLAN 255** | **172.24.255.0/24** |
 |:---:|:---:|:---:|
 | Adresse IP | Nom | Commentaire |
-| 192.168.13.0 |  | Adresse Réservée |
-| 192.168.13.1 à 240|  | Plage DHCP Client |
-| 192.168.13.241 à 252|  | Plage réservée Équipement |
-| 192.168.13.253 | Adresse du routeur |  |
-| 192.168.13.254 | Adresse de Broadcast |  |
+| 172.24.255.0 |  | Adresse Réservée |
+| 172.24.255.1 | Addax (?) |  |
+| 172.24.255.2 | Axolotl |  |
+| 172.24.255.3 | Douc |  |
+| 172.24.255.4 | Nausique |  |
+| 172.24.255.5 | Pangolin |  |
+| 172.24.255.253 | Adresse du routeur |  |
+| 172.24.255.254 | Adresse de Broadcast / Addax |  |  
 
-| **Vente et développement commercial** | **VLAN 14** | **192.168.14.0/24** |
+| **Serveur DMZ** | **VLAN 254** | **172.24.254.0/24** |
 |:---:|:---:|:---:|
 | Adresse IP | Nom | Commentaire |
-| 192.168.14.0 |  | Adresse Réservée |
-| 192.168.14.1 à 240|  | Plage DHCP Client |
-| 192.168.14.241 à 252|  | Plage réservée Équipement |
-| 192.168.14.253 | Adresse du routeur |  |
-| 192.168.14.254 | Adresse de Broadcast |  |
+| 172.24.254.0 |  | Adresse Réservée |
+| 172.24.254.1 | Wombat  |  |
+| 172.24.254.2 | Saloa |  |
+| 172.24.254.3 | Varecia |  |
+| 172.24.254.4 | Adresse du routeur |  |
+| 172.24.254.254 | Adresse de Broadcast |  |  
 
-| **Service Juridique** | **VLAN 15** | **192.168.15.0/24** |
+| **DSI** | **VLAN 16** | **172.24.16.0/24** |
 |:---:|:---:|:---:|
 | Adresse IP | Nom | Commentaire |
-| 192.168.15.0 |  | Adresse Réservée |
-| 192.168.15.1 à 240|  | Plage DHCP Client |
-| 192.168.15.241 à 252|  | Plage réservée Équipement |
-| 192.168.15.253 | Adresse du routeur |  |
-| 192.168.15.254 | Adresse de Broadcast |  |
+| 172.24.16.0 |  | Adresse Réservée |
+| 172.24.16.1 à 240|  | Plage DHCP Client |
+| 172.24.16.241 à 252|  | Plage réservée Équipement |
+| 172.24.16.253 | Adresse du routeur |  |
+| 172.24.16.254 | Adresse de Broadcast |  |
 
-| **Services Généraux** | **VLAN 16** | **192.168.16.0/24** |
+| **Communication** | **VLAN 1** | **172.24.1.0/24** |
 |:---:|:---:|:---:|
 | Adresse IP | Nom | Commentaire |
-| 192.168.16.0 |  | Adresse Réservée |
-| 192.168.16.1 à 240|  | Plage DHCP Client |
-| 192.168.16.241 à 252|  | Plage réservée Équipement |
-| 192.168.16.253 | Adresse du routeur |  |
-| 192.168.16.254 | Adresse de Broadcast |  |
+| 172.24.1.0 |  | Adresse Réservée |
+| 172.24.1.1 à 240|  | Plage DHCP Client |
+| 172.24.1.241 à 252|  | Plage réservée Équipement |
+| 172.24.1.253 | Adresse du routeur |  |
+| 172.24.1.254 | Adresse de Broadcast |  |
 
-| **RH** | **VLAN 17** | **192.168.17.0/24** |
+| **R&D** | **VLAN 2** | **172.24.2.0/24** |
 |:---:|:---:|:---:|
 | Adresse IP | Nom | Commentaire |
-| 192.168.17.0 |  | Adresse Réservée |
-| 192.168.17.1 à 240|  | Plage DHCP Client |
-| 192.168.17.241 à 252|  | Plage réservée Équipement |
-| 192.168.17.253 | Adresse du routeur |  |
-| 192.168.17.254 | Adresse de Broadcast |  |
+| 172.24.2.0 |  | Adresse Réservée |
+| 172.24.2.1 à 240|  | Plage DHCP Client |
+| 172.24.2.241 à 252|  | Plage réservée Équipement |
+| 172.24.2.253 | Adresse du routeur |  |
+| 172.24.2.254 | Adresse de Broadcast |  |
 
-| **Direction Financière** | **VLAN 18** | **192.168.18.0/24** |
+| **Vente et développement commercial** | **VLAN 3** | **172.24.3.0/24** |
 |:---:|:---:|:---:|
 | Adresse IP | Nom | Commentaire |
-| 192.168.18.0 |  | Adresse Réservée |
-| 192.168.18.1 à 240|  | Plage DHCP Client |
-| 192.168.18.241 à 252|  | Plage réservée Équipement |
-| 192.168.18.253 | Adresse du routeur |  |
-| 192.168.18.254 | Adresse de Broadcast |  |
+| 172.24.3.0 |  | Adresse Réservée |
+| 172.24.3.1 à 240|  | Plage DHCP Client |
+| 172.24.3.241 à 252|  | Plage réservée Équipement |
+| 172.24.3.253 | Adresse du routeur |  |
+| 172.24.3.254 | Adresse de Broadcast |  |
 
-| **Direction Marketing** | **VLAN 19** | **192.168.19.0/24** |
+| **Service Juridique** | **VLAN 4** | **172.24.4.0/24** |
 |:---:|:---:|:---:|
 | Adresse IP | Nom | Commentaire |
-| 192.168.19.0 |  | Adresse Réservée |
-| 192.168.19.1 à 240|  | Plage DHCP Client |
-| 192.168.19.241 à 252|  | Plage réservée Équipement |
-| 192.168.19.253 | Adresse du routeur |  |
-| 192.168.19.254 | Adresse de Broadcast |  |
+| 172.24.4.0 |  | Adresse Réservée |
+| 172.24.4.1 à 240|  | Plage DHCP Client |
+| 172.24.4.241 à 252|  | Plage réservée Équipement |
+| 172.24.4.253 | Adresse du routeur |  |
+| 172.24.4.254 | Adresse de Broadcast |  |
 
-| **Direction Générale** | **VLAN 20** | **192.168.20.0/24** |
+| **Services Généraux** | **VLAN 5** | **172.24.5.0/24** |
 |:---:|:---:|:---:|
 | Adresse IP | Nom | Commentaire |
-| 192.168.20.0 |  | Adresse Réservée |
-| 192.168.20.1 à 240|  | Plage DHCP Client |
-| 192.168.20.241 à 252|  | Plage réservée Équipement |
-| 192.168.20.253 | Adresse du routeur |  |
-| 192.168.20.254 | Adresse de Broadcast |  |
+| 172.24.5.0 |  | Adresse Réservée |
+| 172.24.5.1 à 240|  | Plage DHCP Client |
+| 172.24.5.241 à 252|  | Plage réservée Équipement |
+| 172.24.5.253 | Adresse du routeur |  |
+| 172.24.5.254 | Adresse de Broadcast |  |
+
+| **RH** | **VLAN 6** | **172.24.6.0/24** |
+|:---:|:---:|:---:|
+| Adresse IP | Nom | Commentaire |
+| 172.24.6.0 |  | Adresse Réservée |
+| 172.24.6.1 à 240|  | Plage DHCP Client |
+| 172.24.6.241 à 252|  | Plage réservée Équipement |
+| 172.24.6.253 | Adresse du routeur |  |
+| 172.24.6.254 | Adresse de Broadcast |  |
+
+| **Direction Financière** | **VLAN 7** | **172.24.7.0/24** |
+|:---:|:---:|:---:|
+| Adresse IP | Nom | Commentaire |
+| 172.24.7.0 |  | Adresse Réservée |
+| 172.24.7.1 à 240|  | Plage DHCP Client |
+| 172.24.7.241 à 252|  | Plage réservée Équipement |
+| 172.24.7.253 | Adresse du routeur |  |
+| 172.24.7.254 | Adresse de Broadcast |  |
+
+| **Direction Marketing** | **VLAN 8** | **172.24.8.0/24** |
+|:---:|:---:|:---:|
+| Adresse IP | Nom | Commentaire |
+| 172.24.8.0 |  | Adresse Réservée |
+| 172.24.8.1 à 240|  | Plage DHCP Client |
+| 172.24.8.241 à 252|  | Plage réservée Équipement |
+| 172.24.8.253 | Adresse du routeur |  |
+| 172.24.8.254 | Adresse de Broadcast |  |
+
+| **Direction Générale** | **VLAN 9** | **172.24.9.0/24** |
+|:---:|:---:|:---:|
+| Adresse IP | Nom | Commentaire |
+| 172.24.9.0 |  | Adresse Réservée |
+| 172.24.9.1 à 240|  | Plage DHCP Client |
+| 172.24.9.241 à 252|  | Plage réservée Équipement |
+| 172.24.9.253 | Adresse du routeur |  |
+| 172.24.9.254 | Adresse de Broadcast |  |
