@@ -21,7 +21,7 @@ La société comprend actuellement 187 personnes réparties dans 10 département
 ## 3- Les 12 Sprints
 ### Le Sprint 1 - 18/11/2024 au 24/11/2024
 
-| Équipe   | Rôle   | Planification des sprints | Schéma du réseau | Convention de nommage | Tableau de routage | Liste de matériels |
+| Équipe   | Rôle   | Planification des sprints | Schéma du réseau | Convention de nommage | Table de routage | Liste de matériels |
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 | | | Principal | Principal | Secondaire | Secondaire | Secondaire |
 |  Lamine  | Membre | X | X |  |  |  |
@@ -32,5 +32,17 @@ La société comprend actuellement 187 personnes réparties dans 10 département
 
 Nous avons fait le choix de créer une VLAN par département et de les relier par un Switch 3L.   
 Nous avons eu quelques difficultés à écrire une planification des futurs sprints car cela a nécessité de nombreuses recherches. Le résultat se trouve [ici](Ressources/S01_PlanificationSprint.csv).  
+
+### Le Sprint 2 - 25/11/2024 au 01/12/2024
+
+| Équipe   | Rôle   | Création d'un domaine AD | Gestion de l'aborescence AD | Création d'une VM cliente | Table de routage | Liste de matériels | Intégration des utilisateurs AD |
+| :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| | | Principal | Principal | Principal | Secondaire | Secondaire | Secondaire |
+|  Lamine  | SM |  | X | X |  |  |  |
+| Baudouin | PO | X |  |  | | X |  |
+| Charlène | Membre |  |  |  | X |  | X |
+| Anthony  | Membre | X | X |  |  | |  |
+| | | | | | 100% au 26/11 |  |  |
+
 
 ## 4- Améliorations possibles
