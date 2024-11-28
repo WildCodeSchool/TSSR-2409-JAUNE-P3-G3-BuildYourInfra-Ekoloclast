@@ -42,7 +42,9 @@ Nous avons eu quelques difficultés à écrire une planification des futurs spri
 | Baudouin | PO | X |  |  | | X |  |
 | Charlène | Membre |  |  |  | X |  | X |
 | Anthony  | Membre | X | X |  |  | |  |
-| | | | | | 100% au 26/11 |  |  |
+| | | 100% le 27/11 | 100% le 27/11 | 100% le 28/11 | 100% le 26/11 | 100£ le 28/11 | 25% au 29/11 |
+
+Nous avons eu des difficultés à connecter les serveurs et le client, principalement à cause du DHCP. Nous avons donc créé une plage d'adresses IP temporaires sur la VLAN 255, en attendant la mise en place du routeur.  Nous avons également eu des problèmes d'horloge entre les deux serveurs. Le problème revient occasionnellement lors du démarrage des serveurs : les serveurs restent maintenant allumés en continu.   
 
 
 ## 4- Améliorations possibles
