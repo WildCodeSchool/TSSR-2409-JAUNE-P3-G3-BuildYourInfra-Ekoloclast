@@ -64,7 +64,7 @@ Foreach ($User in $Users)
     {
         New-ADUser -Name $Name -DisplayName $DisplayName -SamAccountName $SamAccountName -UserPrincipalName $UserPrincipalName `
         -GivenName $GivenName -Surname $Surname -OfficePhone $OfficePhone -EmailAddress $EmailAddress `
-        -City $Location -Title $Title -MobilePhone $Mobile  `
+        -City $City -Title $Title -MobilePhone $Mobile  `
         -Path $Path -AccountPassword (ConvertTo-SecureString -AsPlainText Azerty1* -Force) -Enabled $True `
         -OtherAttributes @{Company = $Company;Department = $Department} -ChangePasswordAtLogon $True
         # -Manager $Manager
