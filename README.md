@@ -42,9 +42,20 @@ Nous avons eu quelques difficultés à écrire une planification des futurs spri
 | Baudouin | PO | X |  |  | | X |  |
 | Charlène | Membre |  |  |  | X |  | X |
 | Anthony  | Membre | X | X |  |  | |  |
-| | | 100% le 27/11 | 100% le 27/11 | 100% le 28/11 | 100% le 26/11 | 100£ le 28/11 | 25% au 29/11 |
+| | | 100% le 27/11 | 100% le 27/11 | 100% le 28/11 | 100% le 26/11 | 100% le 28/11 | 25% au 29/11 |
 
 Nous avons eu des difficultés à connecter les serveurs et le client, principalement à cause du DHCP. Nous avons donc créé une plage d'adresses IP temporaires sur la VLAN 255, en attendant la mise en place du routeur.  Nous avons également eu des problèmes d'horloge entre les deux serveurs. Le problème revient occasionnellement lors du démarrage des serveurs : les serveurs restent maintenant allumés en continu.   
+
+### Le Sprint 3 - 02/12/2024 au 08/12/2024
+
+| Équipe   | Rôle   | GPO de sécurité - Création | GPO standard - Création | Intégration des utilisateurs AD | Serveur de gestion de parc - Installation de GLPI | Création d'un 2e AD Core | Mettre en place un routeur VyOS |
+| :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| | | Principal | Principal | Principal | Secondaire | Secondaire | Secondaire |
+|  Lamine  | PO |  |  |  |  |  |  |
+| Baudouin | SM |  |  |  | X | X |  |
+| Charlène | Membre | X |  | X |  |  |  |
+| Anthony  | Membre |  | X |  |  | | X |
+| | |  |  | 100% le 03/12 |  |  |  |
 
 
 ## 4- Améliorations possibles
