@@ -55,7 +55,8 @@ Nous avons eu des difficultés à connecter les serveurs et le client, principal
 | Baudouin | SM |  |  |  | X | X |  |
 | Charlène | Membre | X |  | X |  |  |  |
 | Anthony  | Membre |  | X |  |  | | X |
-| | |  |  | 100% le 03/12 |  |  |  |
+| | | 100% le 05/12/2024 | 100% le 05/12 | 100% le 03/12 | 75% au 06/12 | 0% au 06/12 | 25% au 06/12 |
 
+La synchronisation des différentes GPO a pris plus de temps que nous ne l'avions prévu. Cela a ainsi retardé la configuration du serveur GLPI et empêché l'installation d'un troisème serveruAD.
 
 ## 4- Améliorations possibles
