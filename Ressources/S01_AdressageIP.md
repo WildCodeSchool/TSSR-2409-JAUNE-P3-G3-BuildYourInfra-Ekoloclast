@@ -5,11 +5,12 @@ Ekoloclast - 172.24.0.0/16
 |:---:|:---:|:---:|
 | Adresse IP | Nom | Commentaire |
 | 172.24.255.0 |  | Adresse Réservée |
-| 172.24.255.1 | Addax (?) |  |
-| 172.24.255.2 | Axolotl |  |
+| 172.24.255.1 | Addax  | AD - DHCP - DNS |
+| 172.24.255.2 | Axolotl | AD principal - DNS |
 | 172.24.255.3 | Douc |  |
 | 172.24.255.4 | Nausique |  |
 | 172.24.255.5 | Pangolin |  |
+| 172.24.255.6 | Galago | Serveur GLPI |
 | 172.24.255.253 | Adresse du routeur |  |
 | 172.24.255.254 | Adresse de Broadcast / Addax |  |  
 
