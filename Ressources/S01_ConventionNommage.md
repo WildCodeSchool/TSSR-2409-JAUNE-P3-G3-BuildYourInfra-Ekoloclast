@@ -16,20 +16,20 @@ L'architecture **OU** sera :
 	- (OU) Extérieur 
 	- (OU) Paris  
 		- (OU) DSI  
-		- (OU) Comm  
-		- (OU) DirFin  
-		- (OU) DirGen  
-		- (OU) DirMar  
-		- (OU) RD  
+		- (OU) Communication   
+		- (OU) DirectionFinanciere  
+		- (OU) DirectionGénérale  
+		- (OU) DirectionMarketing
+		- (OU) R&D  
 		- (OU) RH  
-		- (OU) SerGen  
-		- (OU) SerJur  
-		- (OU) VDC  
+		- (OU) ServiceGénérauc  
+		- (OU) ServiceJuridique  
+		- (OU) VentesEtDéveloppementCommercial  
 - (OU) Administrateurs  
 	- (OU) Paris  
 	
 ## 3. Les groupes de sécurité
-Les **groupes de sécurité** seront nommés en anglais du type "Grp"+Cible (User/Computer/Server/Admin)+"_"+Particularité.  
+Les **groupes de sécurité** seront nommés du type "Grp"+Cible (User/Computer/Server/Admin)+"_"+Particularité.  
 
 Par exemple, le groupe servant à gérer les managers sera "GrpUser_Manager".  
 Celui pour gérer l'installation des logiciels des ordinateurs du service Communication sera "GrpComputer_SoftwareCommunication".  
