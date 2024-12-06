@@ -15,6 +15,8 @@
 - Suivre les indications demandées pour l'installation.
 ![GLPI installation](/Ressources/S03_GlpiInstallation.png)
 
+
+
 - Une foi connecter avec le compte administrateur glpi, vous arriver sur le menu de Glpi.
 ![GLPI menu](/Ressources/S03_GlpiMenu.png)
 
