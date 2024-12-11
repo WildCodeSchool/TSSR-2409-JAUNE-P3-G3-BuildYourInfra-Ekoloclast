@@ -11,6 +11,7 @@ Ekoloclast - 172.24.0.0/16
 | 172.24.255.4 | Nausique |  |
 | 172.24.255.5 | Pangolin |  |
 | 172.24.255.6 | Galago | Serveur GLPI |
+| 172.24.255.7 | Girafe | Serveur core2 |
 | 172.24.255.253 | Adresse du routeur |  |
 | 172.24.255.254 | Adresse de Broadcast / Addax |  |  
 
