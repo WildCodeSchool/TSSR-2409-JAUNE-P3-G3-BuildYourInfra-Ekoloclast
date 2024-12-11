@@ -81,4 +81,22 @@ Il faut ensuite créer les unités d'organisation au sein de l'AD, selon la conv
    ```   
 ![ServeurCore](/Ressources/S02_install_adds_core.png)
 
+4. On configure ensuite le domaine :
 
+```
+$ForestConfiguration = @{
+'-DatabasePath' = 'C:\Windows\NTDS';
+'-DomainMode' = 'Default';
+'-DomainName' = "eko.lan";
+'-DomainNetbiosName' = "eko";
+'-ForestMode' = 'Default';
+'-InstallDns' = $true;
+'-LogPath' = 'C:\Windows\NTDS';
+'-NoRebootOnCompletion' = $false;
+'-SysvolPath' = 'C:\Windows\SYSVOL';
+'-Force' = $true;
+'-CreateDnsDelegation' = $false }
+
+Import-Module ADDSDeployment
+Install-ADDSForest @ForestConfiguration
+```
