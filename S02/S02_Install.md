@@ -35,12 +35,18 @@ Nous avons besoin de :
     -Dans la rubrique Mode, selectionner Full Clone
     -Et enfin, cliquer sur Clone
 
-Une fois créer, dans hardawre selectionner `add` puis `network device`.
+Une fois créer, dans hardware selectionner `add` puis `network device`.
 Pour bridge : 625, modele : E1000, et il faut décocher firewall.
 
+On lance la serveur, et dans un premier temps, on modifie le nom en Addax.
+Ensuite, on configure l'ip :
+- Adresse ip : 172.24.255.1
+- masque : 255.255.255.0
+- passerelle : 172.24.255.254
 
+Dans un second temps, on installe les rôles DHCP, DNS et ADDS.
 
-En second, on configure les plages DHCP, selon l'adressage IP convenu.
+On configure les plages DHCP, selon l'adressage IP convenu.
 ![ServeurGrafique](/Ressources/S02_WindowsServerGraphique.png)
 ![ServeurCore](/Ressources/S02_WindowsServerGraphiqueDHCP.png)
 
