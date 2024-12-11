@@ -63,7 +63,22 @@ Il faut ensuite créer les unités d'organisation au sein de l'AD, selon la conv
       - Nom de compte : `Administrator`
        - Mot de passe : `Azerty1*`
        - Adresse ip : `172.24.255.2`
-
-Configurer un nom de domaine pour le serveur core
+   
+1. Nous allons selectionner 8 pour afficher les paramètres réseaux, 1 pour choisir l'interface réseau et 1 pour configurer l'adresse ip :
+      - choisir S
+      - adresse ip : 172.24.255.2
+      - masque : 255.255.255.0
+      - passerelle : 172.24.255.254
+      - DNS : 127.0.0.1
+2. Nous allons selectionner 2 pour renommer le serveur, nous allons l'appeler Axolotl, puis le serveur va redémarrer.
+   Configurer un nom de domaine pour le serveur core
 ![ServeurCore](/Ressources/S02_WindowsServerCore.png)
+3. Nous allons selectionner 15, pour utiliser l'interface ligne de commande, et on installe les rôles adds et dsn :
+         ```
+   Add-WindowsFeature -Name "RSAT-AD-Tools" -IncludeManagementTools -IncludeAllSubFeature
+   Add-WindowsFeature -Name "AD-Domain-Services" -IncludeManagementTools -IncludeAllSubFeature
+   Add-WindowsFeature -Name "DNS" -IncludeManagementTools -IncludeAllSubFeature
+        ```
+![ServeurCore](/Ressources/S02_install_adds_core.png)
+
 
