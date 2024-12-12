@@ -59,4 +59,18 @@ Nous avons eu des difficultés à connecter les serveurs et le client, principal
 
 La synchronisation des différentes GPO a pris plus de temps que nous ne l'avions prévu. Cela a ainsi retardé la configuration du serveur GLPI et empêché l'installation d'un troisème serveruAD.
 
+### Le Sprint 4 - 09/12/2024 au 15/12/2024
+
+| Équipe   | Rôle   | Gestion d'un firewall pfSense | Serveur de gestion de parc - Installation de GLPI  | Création d'un 2e AD Core | Mettre en place un routeur VyOS |
+| :--: | :--: | :--: | :--: | :--: | :--: |
+| | | Principal | Principal | Secondaire | Secondaire |
+|  Lamine  | Membre |  |  |  |  |
+| Baudouin | Membre |  | X |  |  |
+| Charlène | SM | X |  |  | X |
+| Anthony  | PO | | X | X |  |
+| | | 50% au 12/12 | 100% le 11/12 | 75% au 12/12 | 75% au 12/12 |
+
+La configuration des VLAN et du trunk des routeurs VyOS n'a pas été faite.
+
+
 ## 4- Améliorations possibles
