@@ -65,3 +65,15 @@ Il faut créer, dans le menu "User Configuration" - "Preferences" - "Windows Set
 Elle se nomme "U_Settings_User_BlockWMlayer". Elle est liée à l'OU Utilisateur et est filtré par le groupe GrpUsers_Ekoloclast.  
 Il faut modifier, dans le menu "User Configuration" - "Policies" - "Administratives Templates" - "System" , le paramètre "Don't run specified Windows applications" et choisir "wmplayer.exe".  
 
+## Création d’un ticket sur GLPI :
+- Ouvrer une page dans le navigateur afin d'accéder à l'interface de  GLPI à partir du lien suivante : http://172.24.255.6/glpi.eko.lan/
+- Rentrer votre Login et Password, puis sélectionner dans login source : SRV-ADDAX-AD1-Utilisateurs.
+![GLPI lien](/Ressources/S03_GlpiLienClient.png)
+
+- Une fois conneter a votre compte, aller dans Créer un ticket
+- Remplir les champs demandés et faire une brève description de votre demande.
+![GLPI ticket1](/Ressources/S03_GlpiCréationTicket.png)
+
+- Une fois le ticket créé, votre demande apparais dans la partie Ticket.
+- Le technicien informatique vous répondra dans un bref délai en fonction de la graviter de votre demande.
+![GLPI ticket2](/Ressources/S03_GlpiTicketEnvoyer.png)
