@@ -7,5 +7,6 @@
 ![](/Ressources/S05_raid1.1.png)
 4. Ajouter le deuxième disque, puis cliquer sur suivant pour selectionner la lettre du lecteur, cliquer sur suivant encore pour nommer le lecteur et valider.\
 ![](/Ressources/S05_raid1.2.png)\
-![](/Ressources/S05_raid1.3.png)\
-5. Attendre la fin du formatage du disque.
+
+5. Attendre la fin du formatage du disque.\
+![](/Ressources/S05_raid1.3.png)
