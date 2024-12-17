@@ -13,12 +13,12 @@
 ### Sur le PC client Windows 10
 - Entrer le lien sur un navigateur web pour se connecter au serveur GLPI : http://172.24.255.6/glpi.eko.lan/
 - Sur la page d'installation :
-Langue : **Français**
-Cliquer sur **Installer**
-Corriger éventuellement les **requis**
-Serveur SQL : `127.0.0.1` ou `localhost`
-Utilisateur : `glpi`
-Mot de passe : `Azerty1*`
+Langue : **Français**/
+Cliquer sur **Installer**/
+Corriger éventuellement les **requis**/
+Serveur SQL : `127.0.0.1` ou `localhost`/
+Utilisateur : `glpi`/
+Mot de passe : `Azerty1*`/
 
 ![GLPI installation](/Ressources/S03_GlpiInstallation.png)
 
