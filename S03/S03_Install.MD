@@ -12,7 +12,10 @@
 
 ### Sur le PC client Windows 10
 - Entrer le lien sur un navigateur web pour se connecter au serveur GLPI : http://172.24.255.6/glpi.eko.lan/
-- Suivre les indications de l'installation.
+- Sur la page d'installation :
+- Langue : **Français**
+- Cliquer sur **Installer**
+- Corriger éventuellement les **requis**
 
 ![GLPI installation](/Ressources/S03_GlpiInstallation.png)
 
