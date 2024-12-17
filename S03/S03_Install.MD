@@ -53,6 +53,7 @@ Groupe "Admins du domaine" en contrôle total
 
 - Télécharger package MSI de l'agent GLPI et le mettre sur le répertoire partagé.
 - Création du partage SMB (partage de fichiers réseau)
+- Depuis le Gestionnaire de serveur > Services de fichiers et de stockage > Partages > Tâches (en haut à gauche pour créé le partage SMB)
 ![GLPI partage](/Ressources/S03_ServeurPartageGlpi.png)
 
 ### Installer l'agent GLPI par GPO
