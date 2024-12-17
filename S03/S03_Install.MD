@@ -41,16 +41,25 @@ Activer l'inventaire dans GLPI :
 - Cochez l'option "Activer l'inventaire" 
 - Enregistrez la modification en cliquant sur le bouton "Sauvegarder" en bas de page
 
-- Sure le serveur Windows, télécharger et partager le package MSI de l'agent GLPI
+## Sure le serveur Windows,
+### Télécharger et partager le package MSI de l'agent GLPI
+- Créé un répertoire partagé et les permissions de partage sont définies comme suit :
+
+Groupe "Ordinateurs du domaine" en lecture seule
+Groupe "Admins du domaine" en contrôle total
+
+- Télécharger package MSI de l'agent GLPI et le mettre sur le répertoire partagé.
+- Création du partage SMB (partage de fichiers réseau)
 ![GLPI partage](/Ressources/S03_ServeurPartageGlpi.png)
 
-- Créer une GPO pour déployer l'agent GLPI
+### Installer l'agent GLPI par GPO
+- Ouvrez la console "Gestion de stratégie de groupe" et créez une nouvelle GPO.
 ![GLPI agent](/Ressources/S03_GpoGlpiAgent.png)
 
-- Configurer l'agent GLPI dans le Registre Windows
+### Configurer l'agent GLPI dans le Registre Windows
 ![GLPI registre](/Ressources/S03_GlpiRegistry.png)
 
-Tester la GPO :
+### Tester la GPO :
 - Première étape, mettre à jour les GPO sur la machine client : gpupdate /force
 - Ouvrir un navigateur afin d'accéder à l'interface de l'agent GLPI à partir de l'URL suivante : http://localhost:62354
 - Cliquez sur "Force an inventory".
