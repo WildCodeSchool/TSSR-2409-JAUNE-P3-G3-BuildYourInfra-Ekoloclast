@@ -36,8 +36,10 @@ Mot de passe : Azerty1*\
 
 ### Pour ajouter des ordinateurs à GLPI 
 Activer l'inventaire dans GLPI :
-- Cliquez sur "Administrateur" dans le menu latéral 
-- Cliquez sur "Inventaire" 
+
+- Cliquez sur "Administrateur" dans le menu latéral\ 
+- Cliquez sur "Inventaire"\ 
+
 - Cochez l'option "Activer l'inventaire" 
 - Enregistrez la modification en cliquant sur le bouton "Sauvegarder" en bas de page
 
