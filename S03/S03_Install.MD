@@ -38,6 +38,7 @@ Mot de passe : Azerty1*\
 - Activer l'inventaire dans GLPI :
 
 Cliquez sur "Administrateur" dans le menu latéral\ 
+
 Cliquez sur "Inventaire"\ 
 
 - Cochez l'option "Activer l'inventaire" 
