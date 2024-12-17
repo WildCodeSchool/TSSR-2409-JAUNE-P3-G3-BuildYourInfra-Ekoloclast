@@ -58,6 +58,9 @@ Groupe "Admins du domaine" en contrôle total
 
 ### Installer l'agent GLPI par GPO
 - Ouvrez la console "Gestion de stratégie de groupe" et créez une nouvelle GPO.
+- Une fois la GPO créée, éditer via un clic droit sur son nom puis "Modifier".
+- Configuration ordinateur > Stratégies > Paramètres du logiciel > Installation de logiciel
+- Effectuez un clic droit puis : Nouveau > Package.
 ![GLPI agent](/Ressources/S03_GpoGlpiAgent.png)
 
 ### Configurer l'agent GLPI dans le Registre Windows
