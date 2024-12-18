@@ -69,7 +69,7 @@ Groupe "Admins du domaine" en contrôle total
 - clic droit puis cliquez sur Nouveau > Elément Registre.
 ![GLPI registre](/Ressources/S03_GlpiRegistry.png)
 ![GLPI registre1](/Ressources/S03GlpiRegitre2.png)
-![GLPI registre2](/Ressources/S03GlpiRegistre3.png
+![GLPI registre2](/Ressources/S03GlpiRegistre3.png)
 ### Tester la GPO :
 - Première étape, mettre à jour les GPO sur la machine client : gpupdate /force
 - Ouvrir un navigateur afin d'accéder à l'interface de l'agent GLPI à partir de l'URL suivante : http://localhost:62354
