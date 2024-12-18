@@ -20,15 +20,62 @@ Pour commencer, on ajoute un disque dur virtuel à la vm filigule. Le disque est
 
 1. Nous créons un dossier dans le disque installé, qui nous nommerons Utilisateurs. Clique droit sur le dossier et on selectionne `propriétés`.
 2. Aller sur l'onglet sharing et selectionner  partage avancé
+
 #S05_adancesharing
+
 3. Dans la case nom de partage mettre `Utilisateurs$` (le symbole $ permet de masquer le dossier pour les utilisateurs.
-4. Ensuite on clique sur permissions, `supprimer` pour retirer les utilisateurs ayant accès au dossier et on ajoute `Administrateur` et `Utilisateur authentifiés`, puis leurs donner  le contrôle totale.
+4. Ensuite on clique sur permissions, `supprimer` pour retirer les utilisateurs ayant accès au dossier et on ajoute `Administrateur` et `Utilisateur authentifiés`, puis leurs donner  le contrôle 
+totale.
+
 #S05_permissionUser
+
 5. Ensuite on se rend sur l'onglet `sécurité` puis `avancé` pour configurer les droits ntfs sur le dossier.
+
 6. Cliquer sur `désactiver héritage` pour désactiver l'héritage des droits sur le dossier, et comfirmer le choix.
+
 #S05_héritage
+
 7. Cliquer sur le bouton `ajouter` et autoriser `créateur propriétaire`, `Système`, `Administrateurs`, `GrpUsers_Ekoloclast`. Leurs donner le contrôle totale, puis valider.
-8. 
+8. Nous allons ensuite dans `groupe policy management`, pour GPO.
+
+#S05_grpPolicyManagement
+
+9. Clique droit sur `group policy management` et selectionner `nouvelle GPO` et nous allons la nommer "U_users_??_mappageReseau_I"
+10. En premier, nous allons nous rendre dans `Configuration utilisateur` -> ` Preferences` -> `Paramètres Windows` -> `Dossier`
+  • Il faut clique droit dans la fenêtre de droite, et dans ènouveauè on selectionne `dossier`.
+
+#S05_gpoDossier  
+  
+• Complétez la fenêtre en spécifiant bien l’emplacement où seront créés les dossiers utilisateurs (cet
+    emplacement correspond à l’espace de partage précédemment configuré).
+  • Cliquer l’onglet « Commun » et activez la case « Exécuter dans le contexte de sécurité de l’utilisateur
+    connecté (option de stratégie utilisateur) » et validez vos choix.
+
+#S05_ConfigGpoDossier
+
+11. En second, nous allons nous rendre dans `Configuration utilisateur` -> ` Preferences` -> `Paramètres Windows` -> `lecteur mappé`
+  • Completer la fenêtre ainsi :
+    
+    • %LogonUser% permet de créer un dossier partagé avec l'identifiant de l'utilisateur
+    • Cocher la case Reconnect permet de reconnecter automatiquement le lecteur en cas de déconnexion.
+    • afficher ce lecteur et afficher tous les lecteurs permettra d'afficher le lecteur dans l'arborescence de fichiers
+
+#S05_gpoMap
+
+l'onglet `Commun` et cliquez la case `Exécuter dans le contexte de sécurité` et valider.
+
+12. Nous allons ajouter un raccourci sur le bureau de l’utilisateur connecté. Ce raccourci pointera directement vers son
+espace personnel sur le serveur.
+    • nous allons nous rendre dans `Configuration utilisateur` -> ` Preferences` -> `Paramètres Windows` -> `raccourcis`
+    • Sélectionner « Raccourcis » et faire un clic droit dans la fenêtre de droite, Cliquer `Nouveau`-> `Raccourci`
+    • Completer la fenêtre ainsi :
+
+    • Cliquer l’onglet « Commun » et activez la case « Exécuter dans le contexte de sécurité de l’utilisateur
+    connecté (option de stratégie utilisateur) » et validez vos choix.
+
+#S05_gpoRaccourcie
+
+
 
 ### 2 - Mettre en place du RAID 1 sur le volume système des serveurs
 
