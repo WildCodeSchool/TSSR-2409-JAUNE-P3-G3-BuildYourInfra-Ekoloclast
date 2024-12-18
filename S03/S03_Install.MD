@@ -64,6 +64,7 @@ Groupe "Admins du domaine" en contrôle total
 ![GLPI agent](/Ressources/S03_GpoGlpiAgent.png)
 
 ### Configurer l'agent GLPI dans le Registre Windows
+- clic droit sur la GPO Glpi puis "Modifier"
 - Configuration ordinateur > Préférences > Paramètres Windows > Registre
 - clic droit puis cliquez sur Nouveau > Elément Registre.
 ![GLPI registre](/Ressources/S03_GlpiRegistry.png)
