@@ -103,6 +103,5 @@ espace personnel sur le serveur.
 
 ### 5 - Automatisation du placement dans la bonne OU
 
-### 2 Installation RAiD1
 
 
