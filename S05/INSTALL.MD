@@ -40,7 +40,7 @@ totale.
 
 #S05_grpPolicyManagement
 
-9. Clique droit sur `group policy management` et selectionner `nouvelle GPO` et nous allons la nommer "U_users_??_mappageReseau_I"
+9. Clique droit sur `group policy management` et selectionner `nouvelle GPO` et nous allons la nommer "U_Sharing_Users_mappageReseau_I"
 10. En premier, nous allons nous rendre dans `Configuration utilisateur` -> ` Preferences` -> `Paramètres Windows` -> `Dossier`
   • Il faut clique droit dans la fenêtre de droite, et dans ènouveauè on selectionne `dossier`.
 
