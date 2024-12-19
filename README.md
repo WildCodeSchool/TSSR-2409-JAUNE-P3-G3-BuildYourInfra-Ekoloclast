@@ -61,16 +61,29 @@ La synchronisation des différentes GPO a pris plus de temps que nous ne l'avion
 
 ### Le Sprint 4 - 09/12/2024 au 15/12/2024
 
-| Équipe   | Rôle   | Gestion d'un firewall pfSense | Serveur de gestion de parc - Installation de GLPI  | Création d'un 2e AD Core | Mettre en place un routeur VyOS |
+| Équipe   | Rôle   | Gestion d'un firewall pfSense | Serveur de gestion de parc - Installation de GLPI  | Création d'un 2e AD Core | Mise en place d'un routeur VyOS |
 | :--: | :--: | :--: | :--: | :--: | :--: |
 | | | Principal | Principal | Secondaire | Secondaire |
 |  Lamine  | Membre |  |  |  |  |
 | Baudouin | Membre |  | X |  |  |
 | Charlène | SM | X |  |  | X |
 | Anthony  | PO | | X | X |  |
-| | | 50% au 12/12 | 100% le 11/12 | 75% au 12/12 | 75% au 12/12 |
+| | | 50% au 12/12 | 100% le 11/12 | 25% au 12/12 | 75% au 12/12 |
 
-La configuration des VLAN et du trunk des routeurs VyOS n'a pas été faite.
+La configuration des VLAN et du trunk des routeurs VyOS n'a pas été faite. Les règles de pare-feu n'ont pas pu être testé car nous avons un problème dans la configuration des routeurs.  
+
+### Le Sprint 5 - 16/12/2024 au 22/12/2024
+
+| Équipe   | Rôle   | Gestion d'un firewall pfSense | Création d'un 2e AD Core | Mise en place de deux routeurs VyOS | Mise en place du RAID 1 sur un serveur | Mise en place des dossiers réseaux | GPO Télémétrie | Mise en place de LAPS | GPO Restriction d'utilisation | Déplacement automatique des PC dans les OU |
+| :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| | | Principal | Secondaire | Principal | Principal | Principal | Secondaire | Secondaire | Secondaire | Optionnel |
+|  Lamine  | Membre |  |  |  |  |  |  |  |  |  |
+| Baudouin | Membre |  |  |  | X | X | X |  | X |  |
+| Charlène | PO | X |  | X |  |  |  | X |  |  |
+| Anthony  | SM |  | X |  | X | X |  |  |  |  |
+| | | 100% le 18/12 | 25% au 19/12 | 100% le 17/12 | 100% le 17/12 |  |  |  |  |  |
+
+Nous avons un problème de SID avec le Windows Server Core.
 
 
 ## 4- Améliorations possibles
