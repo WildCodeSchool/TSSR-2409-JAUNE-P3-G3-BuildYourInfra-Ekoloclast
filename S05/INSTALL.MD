@@ -34,7 +34,7 @@ totale.
 
 5. Ensuite on se rend sur l'onglet `sécurité` puis `avancé` pour configurer les droits ntfs sur le dossier.
 
-6. Cliquer sur `désactiver héritage` pour désactiver l'héritage des droits sur le dossier, et comfirmer le choix.
+6. Cliquer sur `désactiver héritage` pour désactiver l'héritage des droits sur le dossier, et comfirmer le choix. Il est préférable de désactiver l'héritage sur le dossier partagé de manière à définir explicitement les droits sur cette racine. Ceci évite que les permissions d'un dossier de niveau supérieur puissent impacter notre répertoire partagé.
 
 #S05_héritage
 ![](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P3-G3-BuildYourInfra-Ekoloclast/blob/main/Ressources/S05_h%C3%A9ritage.png)
