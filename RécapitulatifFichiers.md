@@ -16,8 +16,9 @@
 | :--: | :--: | :--: |
 | Serveur AD - DHCP - DNS | [lien](./S02/S02_Install.md) | **À faire** (S02) |
 | Serveur AD Core | [lien](./S02/S02_Install.md) | **À faire** (S02) |
-| Serveur GLPI | [lien](./Ressources/S01_TableDeRoutage.md) | **À faire** (S03) |
+| Serveur GLPI | [lien](./Ressources/S01_TableDeRoutage.md) | A jour (S05) |
 | Client | [lien](./S02/S02_Install.md) | À jour (S03) |
 | GPO | [lien](./S03/S03_User_Guide.md) | À jour (S03) |
 | Ajout d'utilisateur AD | [lien](./S03/S03_User_Guide.md) | À jour (S03) |
-| Routeur VyOS | | **À faire** |
+| Routeur VyOS | [lien](/S04/S04_Install.md) | A jour (SO5) |
+| PfSense | [lien](/S04/S04_Install.md) | A jour (SO5) |
