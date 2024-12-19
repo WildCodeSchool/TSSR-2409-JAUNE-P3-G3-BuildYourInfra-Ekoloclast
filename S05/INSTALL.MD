@@ -17,34 +17,40 @@
 Pour commencer, on ajoute un disque dur virtuel à la vm filigule. Le disque est formaté et se nomme Ad_stockage.
 
 #### Mappage du lecteur réseau i
+![](S05/S05_Gpomap.png)
 
 1. Nous créons un dossier dans le disque installé, qui nous nommerons Utilisateurs. Clique droit sur le dossier et on selectionne `propriétés`.
 2. Aller sur l'onglet sharing et selectionner  partage avancé
 
 #S05_adancesharing
+![](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P3-G3-BuildYourInfra-Ekoloclast/blob/main/S05/S05_advancesharing.png)
 
 3. Dans la case nom de partage mettre `Utilisateurs$` (le symbole $ permet de masquer le dossier pour les utilisateurs.
 4. Ensuite on clique sur permissions, `supprimer` pour retirer les utilisateurs ayant accès au dossier et on ajoute `Administrateur` et `Utilisateur authentifiés`, puis leurs donner  le contrôle 
 totale.
 
 #S05_permissionUser
+![](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P3-G3-BuildYourInfra-Ekoloclast/blob/main/S05/S05_permissionUser.png)
 
 5. Ensuite on se rend sur l'onglet `sécurité` puis `avancé` pour configurer les droits ntfs sur le dossier.
 
 6. Cliquer sur `désactiver héritage` pour désactiver l'héritage des droits sur le dossier, et comfirmer le choix.
 
 #S05_héritage
+![](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P3-G3-BuildYourInfra-Ekoloclast/blob/main/S05/S05_h%C3%A9ritage.png)
 
 7. Cliquer sur le bouton `ajouter` et autoriser `créateur propriétaire`, `Système`, `Administrateurs`, `GrpUsers_Ekoloclast`. Leurs donner le contrôle totale, puis valider.
 8. Nous allons ensuite dans `groupe policy management`, pour GPO.
 
 #S05_grpPolicyManagement
+![](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P3-G3-BuildYourInfra-Ekoloclast/blob/main/S05/S05_grpPolicyManagement.png)
 
 9. Clique droit sur `group policy management` et selectionner `nouvelle GPO` et nous allons la nommer "U_Sharing_Users_mappageReseau_I"
 10. En premier, nous allons nous rendre dans `Configuration utilisateur` -> ` Preferences` -> `Paramètres Windows` -> `Dossier`
   • Il faut clique droit dans la fenêtre de droite, et dans ènouveauè on selectionne `dossier`.
 
 #S05_gpoDossier  
+![](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P3-G3-BuildYourInfra-Ekoloclast/blob/main/S05/S05_gpoDossier.png)
   
 • Complétez la fenêtre en spécifiant bien l’emplacement où seront créés les dossiers utilisateurs (cet
     emplacement correspond à l’espace de partage précédemment configuré).
