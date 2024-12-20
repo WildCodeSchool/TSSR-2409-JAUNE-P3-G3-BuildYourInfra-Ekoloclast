@@ -41,7 +41,7 @@ Cliquez sur "Administrateur" dans le menu latéral
 
 Cliquez sur "Inventaire"
 
-- Cochez l'option "Activer l'inventaire" 
+- Cochez l'option "Activer l'inventaire" et "Créer un ordinateur pour les machines virtuelles"
 - Enregistrez la modification en cliquant sur le bouton "Sauvegarder" en bas de page
 
 ## Sure le serveur Windows,
