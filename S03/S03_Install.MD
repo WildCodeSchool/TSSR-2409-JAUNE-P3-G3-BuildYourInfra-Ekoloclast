@@ -54,7 +54,7 @@ Groupe "Admins du domaine" en contrôle total
 - Télécharger package MSI de l'agent GLPI et le mettre sur le répertoire partagé.
 - Création du partage SMB (partage de fichiers réseau)
 - Depuis le Gestionnaire de serveur > Services de fichiers et de stockage > Partages > Tâches (en haut à gauche pour créé le partage SMB)
-![GLPI partage](/Ressources/S03_ServeurPartageGlpi.png)
+![GLPI partage](/Ressources/S03_ServeurPartageGlpi2.png)
 
 ### Installer l'agent GLPI par GPO
 - Ouvrez la console "Gestion de stratégie de groupe" et créez une nouvelle GPO.
@@ -68,8 +68,8 @@ Groupe "Admins du domaine" en contrôle total
 - Configuration ordinateur > Préférences > Paramètres Windows > Registre
 - clic droit puis cliquez sur Nouveau > Elément Registre.
 ![GLPI registre](/Ressources/S03_GlpiRegistry.png)
-![GLPI registre1](/Ressources/S03GlpiRegitre2.png)
-![GLPI registre2](/Ressources/S03GlpiRegistre3.png)
+![GLPI registre1](/Ressources/S03_GlpiRegitre2.2.png)
+![GLPI registre2](/Ressources/S03_GlpiRegistre3.2.png)
 ### Tester la GPO :
 - Première étape, mettre à jour les GPO sur la machine client : gpupdate /force
 - Ouvrir un navigateur afin d'accéder à l'interface de l'agent GLPI à partir de l'URL suivante : http://localhost:62354
@@ -77,4 +77,4 @@ Groupe "Admins du domaine" en contrôle total
 ![GLPI lient](/Ressources/S03_GlpiLient.png)
 
 Sure GLPI aller sur > Parc > Ordinateurs. Le PC client doit apparaître.
-![GLPI ordinateur](/Ressources/S03_GlpiOrdinateur.png)
+![GLPI ordinateur](/Ressources/S03_GlpiOrdinateur2.png)
