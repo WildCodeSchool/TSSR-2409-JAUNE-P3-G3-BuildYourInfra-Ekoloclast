@@ -79,4 +79,4 @@ Groupe "Admins du domaine" en contrôle total
 ![GLPI lient](/Ressources/S03_GlpiLient.png)
 
 Sure GLPI aller sur > Parc > Ordinateurs. Le PC client doit apparaître.
-![GLPI ordinateur](/Ressources/S03_GlpiOrdinateur2.png)
+![GLPI ordinateur](/Ressources/S03_GlpiOrdinateur3.png)
