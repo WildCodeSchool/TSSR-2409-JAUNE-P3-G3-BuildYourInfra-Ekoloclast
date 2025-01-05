@@ -71,7 +71,7 @@ Groupe "Admins du domaine" en contrôle total
 
 ![GLPI registre1](/Ressources/S03_GlpiRegitre2.2.png)
 
-![GLPI registre2](/Ressources/S03_GlpiRegistre3.2.png)
+![GLPI registre2](/Ressources/S03_GlpiRegitre3.2.png)
 ### Tester la GPO :
 - Première étape, mettre à jour les GPO sur la machine client : gpupdate /force
 - Ouvrir un navigateur afin d'accéder à l'interface de l'agent GLPI à partir de l'URL suivante : http://localhost:62354
