@@ -68,7 +68,9 @@ Groupe "Admins du domaine" en contrôle total
 - Configuration ordinateur > Préférences > Paramètres Windows > Registre
 - clic droit puis cliquez sur Nouveau > Elément Registre.
 ![GLPI registre](/Ressources/S03_GlpiRegistry.png)
+
 ![GLPI registre1](/Ressources/S03_GlpiRegitre2.2.png)
+
 ![GLPI registre2](/Ressources/S03_GlpiRegistre3.2.png)
 ### Tester la GPO :
 - Première étape, mettre à jour les GPO sur la machine client : gpupdate /force
