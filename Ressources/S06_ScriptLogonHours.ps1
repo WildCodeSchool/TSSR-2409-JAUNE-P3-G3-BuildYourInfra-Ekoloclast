@@ -8,7 +8,7 @@ $Utilisateurs=Get-ADUSer -SearchBase "OU=Utilisateurs,DC=eko,DC=lan" -Filter *
 [byte[]]$Heures = @(0,0,0,224,255,3,224,255,3,224,255,3,224,255,3,224,255,3,224,255,3)
 [byte[]]$HeuresBypass = @(255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255)
 
-Foreach $Utilisateur in $Utilisateurs
+Foreach ($Utilisateur in $Utilisateurs)
 {
     if (Get-ADGroupMember -R -Identity "GrpUsers_LogonHoursBypass" | Where-Object SamAccountName -eq $Utilisateur.SamAccountName)
     {
