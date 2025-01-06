@@ -14,7 +14,7 @@ Sur "Ordinateurs" clic droit "link an Existing GPO" pour lié la nouvelle GPO.
 
 Faire un clic droit sur la GPO et sélectionner "edit".
 
-Computer Configuration > Administration Templates > Windows Components > Search > Allow Cortona > Disabled
+Computer Configuration > Policies > Administration Templates > Windows Components > Search > Allow Cortona > Disabled
 
 ![GPO Télémétrie1](/Ressources/S06_GPO_Télémétrie_1.png)
 
@@ -30,7 +30,7 @@ Sur "Ordinateurs" clic droit "link an Existing GPO" pour lié la nouvelle GPO.
 
 Faire un clic droit sur la GPO et sélectionner "edit".
 
-Computer Configuration > Administration Templates > Windows Components > Data Collection and Preview Builds > Allow device name to be sent in Windows diagnostic data > Disabled
+Computer Configuration > Policies > Administration Templates > Windows Components > Data Collection and Preview Builds > Allow device name to be sent in Windows diagnostic data > Disabled
 
 ![GPO Télémétrie3](/Ressources/S06_GPO_Télémétrie_3.png)
 
