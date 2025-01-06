@@ -52,4 +52,33 @@ Dans "Preferences", "Windows Settings" et "Shortcuts" : faire "new" et mettre le
 Enfin dans l'onglet "common", cocher " run in logged-on user security context".  
 ![GPO Service Shortcut](/Ressources/S06_GPOService2.png)
 
-![GPO Service Résumé](/Ressources/S06_GPOService3.png)
+![GPO Service Résumé](/Ressources/S06_GPOService3.png)  
+
+## Configuration de LAPS
+
+Il faut tout d'abord télécharger le fichier **LAPS.x64.msi** à ce [lien](https://www.microsoft.com/en-us/download/details.aspx?id=46899) et placer ce document dans le partage du serveur AD.  
+Puis, sur le contrôleur de domaine **FSMO Maitre RID** (Addax), lancer l'installation de la même manière que sur l'image suivante :  
+![Installation LAPS sur le serveur](/Ressources/S06_InstallationLAPS.png)  
+
+Dans une console PowerShell, exécuter les commandes suivantes :
+```
+Import-Module AdmPwd.PS  
+Update-AdmPwdADSchema  
+Set-AdmPwdComputerSelfPermission -OrgUnit "OU=Ordinateurs,DC=eko,DC=lan"  
+Set-AdmPwdReadPasswordPermission -Identity "OU=Ordinateurs,DC=eko,DC=lan" -AllowedPrincipals "GrpAdmins_Ekoloclast"  
+Set-AdmPwdResetPasswordPermission -Identity "OU=Ordinateurs,DC=eko,DC=lan" -AllowedPrincipals "GrpAdmins_Ekoloclast"  
+Copy-Item -Recurse -Force -Path "C:\PolicyDefinitions" -Destination "C:\Windows\SYSVOL\sysvol\eko.lan\Policies"  
+```  
+
+Créer deux nouvelles GPO **C_Security_Computer_LAPS**  et **C_Software_Computer_InstallLAPS**, liées à l'OU *Ordinateurs*, avec la configuration *User* désactivée. 
+Retirer le "Authenticated User" et rajouter "Domain Computer" et "GrpComputers_Ekoloclast".  
+
+Pour **C_Security_Computer_LAPS**, dans *Computer Configuration*, *Administrative Template* et *LAPS* :  
+- *Password Settings* : mettre "Enabled" et "32" en *Password Length*  
+- *Do not allow password expiration* : mettre "Enabled"
+- *Enable local  admin password* : mettre "Enabled"  
+
+Pour **C_Software_Computer_InstallLAPS**, dans *Computer Configuration*, *Policies*, *Software Settings* et *Software Installation* :  
+- Faire "New"
+- Choisir le fichier "LAPS.x64.msi" présent sur le dossier partagé
+
