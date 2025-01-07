@@ -81,9 +81,20 @@ La configuration des VLAN et du trunk des routeurs VyOS n'a pas été faite. Les
 | Baudouin | Membre |  |  |  | X | X | X |  | X |  |
 | Charlène | PO | X |  | X |  |  |  | X |  |  |
 | Anthony  | SM |  | X |  | X | X |  |  |  |  |
-| | | 100% le 18/12 | 25% au 19/12 | 100% le 17/12 | 100% le 17/12 |  |  |  |  |  |
+| | | 100% le 18/12 | 25% au 19/12 | 100% le 17/12 | 100% le 17/12 | 25% au 22/12/2024 |  | 75% au 22/12/2024 |  |  |
 
-Nous avons un problème de SID avec le Windows Server Core.
+Nous avons un problème de SID avec le Windows Server Core. Cela a entrainé une panne de notre Active Directory. Nous avons donc effacé et recréé trois nouveaux serveurs AD.
+
+### Le Sprint 6 - 02/01/2025 au 10/01/2025
+
+| Équipe   | Rôle  | Sauvegarde de données | Nouveau fichier utilisateurs | Surveillance du pare-feu pfsense | Gestion des logs centralisée | Supervision de l'infrastructure réseau | Mise en place des dossiers réseaux | GPO Télémétrie | Mise en place de LAPS | GPO Restriction d'utilisation | Déplacement automatique des PC dans les OU |
+| :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| | | Principal | Secondaire | Secondaire | Secondaire | Principal | Principal | Secondaire | Secondaire | Secondaire | Optionnel |
+|  Lamine  | SM |  |  |  |  | X |  |  |  |  | |
+| Baudouin | PO |  |  |  | X |  |  | X |  |  |  |
+| Charlène | Membre |  | X | X |  |  | X |  | X | X | X |
+| Anthony  | Membre | X |  |  |  |  | X |  |  |  | |
+| | |  |  |  |  |  | 100% le 05/01 | 100% le 06/01 | 100% le 06/01 | 100% le 06/01 | |
 
 
 ## 4- Améliorations possibles
