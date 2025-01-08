@@ -20,13 +20,16 @@ L'architecture **OU** sera :
 		- (OU) DirectionFinanciere  
 		- (OU) DirectionGénérale  
 		- (OU) DirectionMarketing
-		- (OU) R&D  
+		- (OU) Recherche et Innovation
 		- (OU) RH  
-		- (OU) ServiceGénérauc  
+		- (OU) Gestion des Biens 
 		- (OU) ServiceJuridique  
 		- (OU) VentesEtDéveloppementCommercial  
 - (OU) Administrateurs  
-	- (OU) Paris  
+	- (OU) Paris
+- (OU) CompteDédié
+- (OU) CompteSuspendu
+- (OU) PCNonVérifiés
 	
 ## 3. Les groupes de sécurité
 Les **groupes de sécurité** seront nommés du type "Grp"+Cible (User/Computer/Server/Admin)+"_"+Particularité.  
@@ -41,7 +44,7 @@ Les **ordinateurs clients** seront nommés avec la première lettre de la ville 
 Les ordinateurs de Ekoloclast-Paris sont déjà nommés (par exemple P0064).  
 
 Les **serveurs** seront nommés d'après un animal en danger d'extinction, la première lettre correspondra au rôle principal du serveur.  
-Par exemple, Addax pour un serveur AD ou Saola pour un serveur SMTP.
+Par exemple, Addax pour un serveur AD ou Saola pour un serveur de sauvegarde.
 
 ## 5. Les utilisateurs
 Les noms de compte **utilisateur** seront au format "Nom de famille (en retirant les espaces/tirets/apostrophe)"+"."+"3 premières lettres du prénom". Si ce nom est déjà utilisé, un chiffre sera ajouté à la suite.
