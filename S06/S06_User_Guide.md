@@ -68,5 +68,26 @@ Pour cela :
 - dans *Computer*, *Policies*, *Windows Settings*, *Security Settings*, *Local Poliicies* et *Security Options*, sélectionner **Network security : Force logoff when logon hours expire**  
 - lier à la GPO à l'OU *Ordinateurs*  
 
+---
+
+## Configuration du dashboard PfSense
+
+![Dashboard](/Ressources/S06_PfSense_Dashboard.png)  
+
+Afin d'obtenir ce résultat, il faut aller sur la page *Dashboard* à l'adresse **http://pfsense**.  
+Les widgets à rajouter (en cliquant sur le "+" de "Status/Dashboard" et sur le "=" des Widgets à ajouter) sont :
+- **Traffic Graphs**  
+- **Service Status**  
+- **Firewall Logs**  
+- **System Information** : il faut retirer des informations moins importantes en cliquant le symbole d'outil.
+- **Interfaces**
+- **Disk**
+- **S.M.A.R.T Status**  : cela sert à surveiller la santé du disque dur de la machine.  
+- **Interface Statistics** : il faut retirer les informations concernant les paquets.
+
+Pour avoir un affichage à 4 colonnes, aller dans *System* puis *General Setup* puis **Dashboard Columns**.  
+
+
+
 
 
