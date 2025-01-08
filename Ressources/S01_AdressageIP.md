@@ -5,23 +5,26 @@ Ekoloclast - 172.24.0.0/16
 |:---:|:---:|:---:|
 | Adresse IP | Nom | Commentaire |
 | 172.24.255.0 |  | Adresse Réservée |
-| 172.24.255.1 | Addax  | AD - DHCP - DNS |
-| 172.24.255.2 | Axolotl | AD principal - DNS |
-| 172.24.255.3 | Douc |  |
-| 172.24.255.4 | Nausique |  |
-| 172.24.255.5 | Pangolin |  |
+| 172.24.255.1 | Axolotl  | AD - DNS |
+| 172.24.255.2 | Addax | AD principal - DHCP- DNS |
+| 172.24.255.3 | |  |
+| 172.24.255.4 | |  |
+| 172.24.255.5 | |  |
 | 172.24.255.6 | Galago | Serveur GLPI |
-| 172.24.255.7 | Girafe | Serveur core2 |
+| 172.24.255.7 |  |  |
+| 172.24.255.8 | Fuligule | Serveur de  fichiers |
+| 172.24.255.9 | Saloa | Serveur de saivegarde |
+| 172.24.255.10 | Johora | Serveur de journalisation |
 | 172.24.255.253 | Adresse du routeur |  |
-| 172.24.255.254 | Adresse de Broadcast / Addax |  |  
+| 172.24.255.254 | Adresse de Broadcast  |  |  
 
 | **Serveur DMZ** | **VLAN 254** | **172.24.254.0/24** |
 |:---:|:---:|:---:|
 | Adresse IP | Nom | Commentaire |
 | 172.24.254.0 |  | Adresse Réservée |
-| 172.24.254.1 | Wombat  |  |
-| 172.24.254.2 | Saloa |  |
-| 172.24.254.3 | Varecia |  |
+| 172.24.254.1 |  |  |
+| 172.24.254.2 |  |  |
+| 172.24.254.3 |  |  |
 | 172.24.254.4 | Adresse du routeur |  |
 | 172.24.254.254 | Adresse de Broadcast |  |  
 
@@ -29,8 +32,9 @@ Ekoloclast - 172.24.0.0/16
 |:---:|:---:|:---:|
 | Adresse IP | Nom | Commentaire |
 | 172.24.16.0 |  | Adresse Réservée |
-| 172.24.16.1 à 240|  | Plage DHCP Client |
-| 172.24.16.241 à 252|  | Plage réservée Équipement |
+| 172.24.16.1 à 240 |  | Plage DHCP Client |
+| 172.24.16.241 à 251 |  | Plage réservée Équipement |
+| 172.24.16.252 | P0001 | PC réservé à la supervision réseau |
 | 172.24.16.253 | Adresse du routeur |  |
 | 172.24.16.254 | Adresse de Broadcast |  |
 
@@ -43,7 +47,7 @@ Ekoloclast - 172.24.0.0/16
 | 172.24.1.253 | Adresse du routeur |  |
 | 172.24.1.254 | Adresse de Broadcast |  |
 
-| **R&D** | **VLAN 2** | **172.24.2.0/24** |
+| **Recherche et Innovation** | **VLAN 2** | **172.24.2.0/24** |
 |:---:|:---:|:---:|
 | Adresse IP | Nom | Commentaire |
 | 172.24.2.0 |  | Adresse Réservée |
@@ -70,7 +74,7 @@ Ekoloclast - 172.24.0.0/16
 | 172.24.4.253 | Adresse du routeur |  |
 | 172.24.4.254 | Adresse de Broadcast |  |
 
-| **Services Généraux** | **VLAN 5** | **172.24.5.0/24** |
+| **Gestion des biens** | **VLAN 5** | **172.24.5.0/24** |
 |:---:|:---:|:---:|
 | Adresse IP | Nom | Commentaire |
 | 172.24.5.0 |  | Adresse Réservée |
