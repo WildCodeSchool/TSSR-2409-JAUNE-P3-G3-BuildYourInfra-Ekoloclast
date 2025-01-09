@@ -132,3 +132,9 @@ Lorsque vous utilisez PRTG plusieurs options s'offrent à vous.
 
 Ici on va `ajouter un équipement`.
 
+![PRTG](/Ressources/S06_PRTG5.png)
+
+- Donnez un nom à l'équipement
+- Sélectionnez ipv4 ou ipv6
+- Donnez une adresse ip
+
