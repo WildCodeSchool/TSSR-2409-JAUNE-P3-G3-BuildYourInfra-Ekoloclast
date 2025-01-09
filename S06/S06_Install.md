@@ -143,3 +143,8 @@ Sauvegardez les changements et redémarrez le service NXLog à partir d'une cons
 - Si On clique sur un log dans la liste, vous pouvez visualiser son contenu. Cela revient à consulter le journal à partir de l'Observateur d'événements de Windows.
 - Pour rafraichir la liste automatiquement toutes les 5 secondes. Aller sur "Not updating".
 
+
+## Installation PRTG
+
+
+
