@@ -146,5 +146,8 @@ Sauvegardez les changements et redémarrez le service NXLog à partir d'une cons
 
 ## Installation PRTG
 
+Dans un premier temps vous devrez vous rendre sur ce lien:
+``` https://www.paessler.com/prtg/download ``` 
+Vous pourrez ensuite télécharger la version gratuite de PRTG.
 
 
