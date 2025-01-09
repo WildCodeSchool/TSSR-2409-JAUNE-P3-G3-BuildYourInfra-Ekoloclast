@@ -82,3 +82,64 @@ Pour **C_Software_Computer_InstallLAPS**, dans *Computer Configuration*, *Polici
 - Faire "New"
 - Choisir le fichier "LAPS.x64.msi" présent sur le dossier partagé
 
+# Configuration  Graylog:
+## Sur le PC Windows 10, Configurer Graylog pour recevoir les logs Windows :
+- Entrer le lien sur un navigateur web pour se connecter au serveur Graylog : http://172.24.255.10:9000
+
+Mètre le compte admin et le mdp :
+- Username : admingraylog
+- Password : Azerty1*
+
+Créer un input NXLog dans Graylog :
+- cliquez sur le menu Système puis > Inputs >  Select input > GELF UDP > Launch new input.
+- Ajouter un titre et laisser le port par défaut (12201). Le reste doit être laisser pars défaut.
+
+![GraylogInput](/Ressources/S06_GraylogCréationInput.png)
+- Puis valider avec “Launch Input“
+
+## Sur le Windows Serveur 2022, installer et configurer NXLog :
+- Pour télécharger l'agent NXLog aller sur le lien : https://nxlog.co/downloads/nxlog-ce#nxlog-community-edition
+- Puis faite NXLog Community Edition > logo Windows > Windowz x86-64 > Download.
+
+![GraylogAgent](/Ressources/S06_GraylogAgentNxlog.png)
+- Cliquez sur le fichier téléchargé et lancer l’installation.
+- Puis faite Next X3 > install.
+
+Configurer NXLog pour Graylog :
+NXLog étant installé sur la machine, nous pouvons éditer son fichier de configuration situé à l'emplacement suivant :
+- C:\Program Files\nxlog\conf\nxlog.conf
+
+En complément de la configuration déjà présente dans le fichier "nxlog.conf", on vas ajouter ces lignes à la fin :
+```
+<Input in>
+    Module      im_msvistalog
+</Input>
+
+# Déclarer le serveur Graylog (selon input)
+<Extension gelf>
+    Module        xm_gelf
+</Extension>
+
+<Output graylog_udp>
+    Module        om_udp
+    Host          172.24.255.10
+    Port	  12201
+    OutputType    GELF_UDP
+</Output>
+
+# Routage des flux in vers out
+ <Route 1>
+     Path        in => graylog_udp
+ </Route>
+```
+Sauvegardez les changements et redémarrez le service NXLog à partir d'une console PowerShell ouverte en tant qu'administrateur :
+- Restart-Service nxlog
+
+## Sur le PC Windows 10, recevoir les journaux Windows dans Graylog :
+- les journaux doivent désormais être envoyés vers Graylog. Pour le vérifier, cliquez simplement sur "Search" dans le menu de Graylog.
+
+![GraylogSearch](/Ressources/S06_GraylogMenuSearch.png)
+
+- Si On clique sur un log dans la liste, vous pouvez visualiser son contenu. Cela revient à consulter le journal à partir de l'Observateur d'événements de Windows.
+- Pour rafraichir la liste automatiquement toutes les 5 secondes. Aller sur "Not updating".
+
