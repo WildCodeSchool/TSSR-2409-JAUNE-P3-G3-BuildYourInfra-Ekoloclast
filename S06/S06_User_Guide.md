@@ -87,6 +87,42 @@ Les widgets à rajouter (en cliquant sur le "+" de "Status/Dashboard" et sur le 
 
 Pour avoir un affichage à 4 colonnes, aller dans *System* puis *General Setup* puis **Dashboard Columns**.  
 
+## Création backup Addax
+
+- Pour installer Windows Server Backup, nous allons dans ajout de fonctionnalités puis nous choisissons dans fonctionnalités `windows server backup` .
+- Ensuite il faut lancer windows server backup dans tools.
+- Clique droit sur Local Backup puis on sélectionne `Backup Schedule`.
+- On poursuis en cliquant sur suivant.
+- On sélectionne `Full server`
+- Ensuite on définit l'heure et la fréquence de sauvegarde, nous allons  sélectionner `daily` et `23:00`.
+- Pour pouvoir migrer la sauvegarde ailleurs, nous sélectionnons `Back up to a volume`.
+- Pour l'étape suivante, on choisit le disque ou va être stocké la sauvegarde, ici nous utilisons le second disque du serveur.
+- On arrive sur le résumer et on valide.
+
+
+## Migration de la sauvegarde Addax
+
+
+### Étapes pour automatiser Robocopy avec le Planificateur de tâches :
+
+1. **Ouvrir le Planificateur de tâches** :
+    - Cliquez sur le menu **Démarrer** et tapez **Planificateur de tâches** puis ouvrez-le.
+2. **Créer une nouvelle tâche** :
+    - Dans le Planificateur de tâches, cliquez sur **Créer une tâche** dans le panneau de droite.
+3. **Configurer la tâche** :
+    
+	- **Onglet Général** :
+        - On donne un nom à la tâche robocopy_fuligule_incrementielle.
+        - Cochez l'option **Exécuter avec les autorisations les plus élevées**.
+	- **Onglet Déclencheurs** :
+        - Cliquez sur **Nouveau** pour ajouter un déclencheur.
+        - Choisissez **Chaque jour** et définissez l'heure à laquelle vous souhaitez que la copie se fasse.
+        - Cliquez sur **OK**.
+	- **Onglet Actions** :
+          - Cliquez sur **Nouveau** pour ajouter une action.
+        - Dans **Programme/script**, tapez `robocopy`.
+        - Dans **Ajouter des arguments**, entrez votre commande Robocopy sans le mot robocopy: "E:\Backup_addax" "\\Fuligule\G$\Backup\addax" /E /XO /LOG:C:\log\Log.txt
+
 
 
 
