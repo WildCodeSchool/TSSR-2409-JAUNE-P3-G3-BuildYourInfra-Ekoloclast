@@ -161,3 +161,7 @@ Vous pourrez ensuite télécharger la version d'essai de PRTG.
 
 ![PRTG](/Ressources/S06_PRTG2.png)  
 
+- Une fois le téléchargement terminé,un nom d'utilisateur vous sera attribué ainsi qu'un mot de passe.
+- Le mot de passe pourra être changé plus tard.
+
+![PRTG](/Ressources/S06_PRTG3.png)  
