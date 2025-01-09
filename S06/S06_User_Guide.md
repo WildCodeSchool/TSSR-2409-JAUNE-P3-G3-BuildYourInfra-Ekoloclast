@@ -124,6 +124,11 @@ Pour avoir un affichage à 4 colonnes, aller dans *System* puis *General Setup* 
         - Dans **Ajouter des arguments**, entrez votre commande Robocopy sans le mot robocopy: "E:\Backup_addax" "\\Fuligule\G$\Backup\addax" /E /XO /LOG:C:\log\Log.txt
 
 
+## Utilisatuon de PRTG
 
+Lorsque vous utilisez PRTG plusieurs options s'offrent à vous.
 
+![PRTG](/Ressources/S06_PRTG4.png)
+
+Ici on va `ajouter un équipement`.
 
