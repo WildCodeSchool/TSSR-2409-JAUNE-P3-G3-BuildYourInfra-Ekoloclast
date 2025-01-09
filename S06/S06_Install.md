@@ -152,5 +152,12 @@ Dans un premier temps vous devrez vous rendre sur ce lien:
 
 Vous pourrez ensuite télécharger la version d'essai de PRTG.
 
-Entrez d'abord votre mail.
+- Entrez d'abord votre mail.
 ![PRTG](/Ressources/S06_PRTG.png)
+
+
+- Choisissez ensuite le mode d'installation qui vous convient le mieux.
+- L'installation rapide est recommandée par le logiciel
+
+![PRTG](/Ressources/S06_PRTG2.png)  
+
