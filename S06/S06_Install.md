@@ -153,4 +153,4 @@ Dans un premier temps vous devrez vous rendre sur ce lien:
 Vous pourrez ensuite télécharger la version d'essai de PRTG.
 
 Entrez d'abord votre mail.
-![PRTG](/Ressources/S06_PRTG)
+![PRTG](/Ressources/S06_PRTG.png)
