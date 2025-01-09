@@ -141,6 +141,7 @@ Ici on va `ajouter un équipement`.
 
 
 ![PRTG](/Ressources/S06_PRTG6.png)
+
 Lorsque vous avez vos différents équipements,vous pouvez `ajouter un capteur` pour une meilleure supervison.
 
 
@@ -151,7 +152,8 @@ Lorsque vous avez vos différents équipements,vous pouvez `ajouter un capteur` 
 Vous pouvez choisir votre capteur en choisissant vos options,ici on prendra le `ping`.
 
 ![PRTG](/Ressources/S06_PRTG9.png)
-Lorsque vous avez sélectionné votre capteur devrez le créér et attendre quelques secondes.
+
+Lorsque vous avez sélectionné votre capteur vous devrez le créér et attendre quelques secondes.
 
 
 ![PRTG](/Ressources/S06_PRTG10.png)
