@@ -2,7 +2,7 @@
 
 ## Configuration du serveur de fichiers Fuligule
 
-## Mise en place des dossiers de partage Utilisateurs
+### Mise en place des dossiers de partage Utilisateurs
 
 Sur le disque dur dédié, créer un dossier "Utilisateurs".  
 Faire un clic droit dessus, puis sélectionner "Properties", "sharing" et "Advanced Sharing".  
@@ -21,7 +21,7 @@ Puis dans "Preferences" et "Windows Settings" :
 ![GPO Utilisateurs ](/Ressources/S06_GPOUtilisateurs.png)
 
 
-## Mise en place des dossiers de partage Service et Département
+### Mise en place des dossiers de partage Service et Département
 
 Sur le disque dur dédié, créer un dossier "Service" et un dossier "Département".  
 
@@ -54,6 +54,8 @@ Enfin dans l'onglet "common", cocher " run in logged-on user security context".
 
 ![GPO Service Résumé](/Ressources/S06_GPOService3.png)  
 
+---
+
 ## Configuration de LAPS
 
 Il faut tout d'abord télécharger le fichier **LAPS.x64.msi** à ce [lien](https://www.microsoft.com/en-us/download/details.aspx?id=46899) et placer ce document dans le partage du serveur AD.  
@@ -82,8 +84,10 @@ Pour **C_Software_Computer_InstallLAPS**, dans *Computer Configuration*, *Polici
 - Faire "New"
 - Choisir le fichier "LAPS.x64.msi" présent sur le dossier partagé
 
-# Configuration  Graylog:
-## Sur le PC Windows 10, Configurer Graylog pour recevoir les logs Windows :
+---
+
+## Configuration  Graylog:
+### Sur le PC Windows 10, Configurer Graylog pour recevoir les logs Windows :
 - Entrer le lien sur un navigateur web pour se connecter au serveur Graylog : http://172.24.255.10:9000
 
 Mètre le compte admin et le mdp :
@@ -97,7 +101,7 @@ Créer un input NXLog dans Graylog :
 ![GraylogInput](/Ressources/S06_GraylogCréationInput.png)
 - Puis valider avec “Launch Input“
 
-## Sur le Windows Serveur 2022, installer et configurer NXLog :
+### Sur le Windows Serveur 2022, installer et configurer NXLog :
 - Pour télécharger l'agent NXLog aller sur le lien : https://nxlog.co/downloads/nxlog-ce#nxlog-community-edition
 - Puis faite NXLog Community Edition > logo Windows > Windowz x86-64 > Download.
 
@@ -135,7 +139,7 @@ En complément de la configuration déjà présente dans le fichier "nxlog.conf"
 Sauvegardez les changements et redémarrez le service NXLog à partir d'une console PowerShell ouverte en tant qu'administrateur :
 - Restart-Service nxlog
 
-## Sur le PC Windows 10, recevoir les journaux Windows dans Graylog :
+### Sur le PC Windows 10, recevoir les journaux Windows dans Graylog :
 - les journaux doivent désormais être envoyés vers Graylog. Pour le vérifier, cliquez simplement sur "Search" dans le menu de Graylog.
 
 ![GraylogSearch](/Ressources/S06_GraylogMenuSearch.png)
@@ -143,8 +147,9 @@ Sauvegardez les changements et redémarrez le service NXLog à partir d'une cons
 - Si On clique sur un log dans la liste, vous pouvez visualiser son contenu. Cela revient à consulter le journal à partir de l'Observateur d'événements de Windows.
 - Pour rafraichir la liste automatiquement toutes les 5 secondes. Aller sur "Not updating".
 
-
-## Installation PRTG
+--- 
+## Installation et configuration de PRTG
+### Installation PRTG
 
 Dans un premier temps vous devrez vous rendre sur ce lien:
 [PRTG](https://www.paessler.com/prtg/download)
@@ -165,3 +170,70 @@ Vous pourrez ensuite télécharger la version d'essai de PRTG.
 - Le mot de passe pourra être changé plus tard.
 
 ![PRTG](/Ressources/S06_PRTG3.png)  
+
+### Configuration de SNMP
+Pour pouvoir effectuer une supervision des hôtes du réseau, il faut activer et configurer le service **Simple Network Management Protocol** (SNMP) sur chaque machine.  
+
+#### Sur les serveurs Windows 2022
+Dans *Add roles and features*, dans l'onglet *Features*, sélectionner **SNMP Service** et **SNMP WMI Provider**. Les installer.  
+Dans **Services.msc**, aller dans *Properties* de *SNMP Service* :  
+ - dans l'onglet *General* : mettre "Automatic" dans *Startup Type*  
+ - dans l'onglet *Log on* : cocher "Local System Account"  
+ - dans l'onglet *Agent* : cocher toutes les cases  
+ - dans l'onglet *Traps* : mettre **Eko** dans *Community name* pusi cliquer sur "Add to list". Cliquer ensuite sur "Add..." et ajouter l'adresse du PRTG (**172.24.16.252**).  
+ - dans l'onglet *Security* : cocher la case "Send authentication trap". Ajouter **Eko** en "Read only" dans *Accepted community names*. Cocher "Accept SNMP packets from these hosts" et ajouter **172.24.16.252**.  
+
+Dans **Services.msc**, aller dans *Properties* de *SNMP Trap* :  
+ - dans l'onglet *General* : mettre "Automatic" dans *Startup Type* puis demarrer le service  
+ - dans l'onglet *Log on* : cocher "Local System Account"  
+
+Redemarrer les deux services.  
+
+Pour une plus facilité concernant la configuration des Serveurs Windows Core, dans **Services.msc**, aller dans *Action* puis *Connect to another computer ...* et effectuer les mêmes manipulations.  
+
+
+#### Sur les clients W10 et W11
+Sur un serveur AD, créer une GPO **C_Supervision_Computer_SNMP", appliquée à l'OU *Ordinateurs* et avec la configuration Utilisateurs désactivée.  
+Dans *Computer*, *Policies*, *Administrative Templates*, *Network* et *SNMP* :
+- "Specify communities" : *Enabled* et ajouter **Eko**  
+- "Specify permitted managers" : *Enabled* et ajouter **172.24.16.252**  
+- "Specify traps for public community" : *Enabled* et ajouter **172.24.16.252**
+
+![GPO SNMP](/Ressources/S06_SNMPGPO.png)
+
+Dans *Computer*, *Policies*, *Windows Settings* et *Scripts* :
+ - dans "Startup" : sélectionner l'onglet *Powershell Script* et indiquer le fichier de script [S06_ScriptInstallSNMP.ps1](/Ressources/S06_ScriptInstallSNMP.ps1) placé dans le dossier *Share* de Addax  
+ - sélectionner "Run Windows Powershell scripts first"  
+
+
+#### Sur PfSense
+
+Sur la page GUI de PfSense, aller dans **Services** puis **SNMP**.
+Cocher la case "Enable the SNMP Deamon and its control" et la case "Enable the SNMP trap and its controls".  
+Dans "SNMP Daemon Settings", mettre "161" en *Polling Port* et "Eko" en *Read Community String*.  
+Dans "SNMP Trap Settings", mettre "172.24.16.252" en *Trap server*, "162" en *Trap Server Port* et "Eko" en *SNMP Trap String*.  
+Cocher toutes les case de *SNMP Modules*.
+Choisir "LAN" et "IPv4" dans *Interface Binding*.  
+
+
+#### Sur les routeurs VYos
+Sur chaque routeur, entrer les commandes suivantes en changeant uniquement l'adresse de l'interface en lien avec le PRTG :  
+```
+config  
+# Mettre l'adresse de la communauté
+set service snmp community Eko authorization ro  
+
+# Mettre l'adresse de PRTG
+set service snmp community Eko client 172.24.16.252
+set service snmp trap-target 172.24.16.252
+
+# Mettre l'adresse du port relié au PRTG
+set service snmp listen-address 172.24.16.253 port 161 community Eko
+commit  
+save  
+show service snmp
+```
+![SNMP sur Vyos](/Ressources/S06_SNMPVyos.png)  
+
+
+
