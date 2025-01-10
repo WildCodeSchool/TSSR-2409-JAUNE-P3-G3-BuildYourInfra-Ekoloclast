@@ -94,7 +94,9 @@ Nous avons un problème de SID avec le Windows Server Core. Cela a entrainé une
 | Baudouin | PO |  |  |  | X |  |  | X |  |  |  |
 | Charlène | Membre |  | X | X |  |  | X |  | X | X | X |
 | Anthony  | Membre | X |  |  |  |  | X |  |  |  | |
-| | |  |  |  |  |  | 100% le 05/01 | 100% le 06/01 | 100% le 06/01 | 100% le 06/01 | |
+| | | 50% au 10/01 | 50% au 10/01 | 100% au 07/01 | 75% au 10/01 | 100% au 09/01 | 100% le 05/01 | 100% le 06/01 | 100% le 06/01 | 100% le 06/01 | 75% au 10/01 |
 
+Pour le serveur PRTG, nous avons choisi le protocole SNMP car il est multi-OS. Nous n'avons pas encore réussi à déployer SNMP sur une Débian.  
+Le serveur de sauvegarde Saloa devait être un Bareos, mais suite à trop de complications, nous avons migré sur un Samba. Cela a retardé notre avancée dans cet objectif principal.  
 
 ## 4- Améliorations possibles
