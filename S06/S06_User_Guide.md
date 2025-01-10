@@ -124,9 +124,9 @@ Pour avoir un affichage à 4 colonnes, aller dans *System* puis *General Setup* 
         - Dans **Ajouter des arguments**, entrez votre commande Robocopy sans le mot robocopy: "E:\Backup_addax" "\\Fuligule\G$\Backup\addax" /E /XO /LOG:C:\log\Log.txt
 
 
-## Utilisatuon de PRTG
+## Utilisation de PRTG
 
-Lorsque vous utilisez PRTG plusieurs options s'offrent à vous.
+Lorsque vous utilisez PRTG, plusieurs options s'offrent à vous.
 
 ![PRTG](/Ressources/S06_PRTG4.png)
 
@@ -137,6 +137,7 @@ Ici on va `ajouter un équipement`.
 - Donnez un nom à l'équipement
 - Sélectionnez ipv4 ou ipv6
 - Donnez une adresse ip
+- Décocher l'option SNMP et ajouter le nom **Eko** à la communauté.
 
 
 
