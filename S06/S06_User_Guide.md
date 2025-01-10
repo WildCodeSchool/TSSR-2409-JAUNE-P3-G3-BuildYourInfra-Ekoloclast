@@ -57,7 +57,7 @@ La plage horaire autorisée pour se connecter est de **6h à 19h** du **lundi au
 
 Il faut lancer ce script régulièrement en utilisant **Task Scheduler** :  
 - Créer une nouvelle tâche "MàJ Plage Horaire utilisateurs"
-- *Action* : "Start a programme" et donner l'emplacement du script  
+- *Action* : "Start a programme", écrire "Powershell" et donner l'emplacement du script en paramètre    
 - *Triggers* : "daily" à "5:00am"  
 ![Trigger](/Ressources/S06_TaskSchedulerLogon.png)
 
