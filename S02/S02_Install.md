@@ -1,7 +1,7 @@
 # Ekolocast
 
 ## La liste de matériels nécessaires
-La liste des matériels se trouve [ici](Ressources/S02_ListeMatériels)  et comprend le matériel que nous avons besoin afin de créer un réseau fonctionnel.
+La liste des matériels se trouve [ici](Ressources/S02_ListeMateriels)  et comprend le matériel que nous avons besoin afin de créer un réseau fonctionnel.
 
 ## L'installation d'une machine cliente
 Sur votre machine cliente, il faut nommer le PC selon la convention de nommage (dans notre cas, Pxxxx, x étant un chiffre).  
