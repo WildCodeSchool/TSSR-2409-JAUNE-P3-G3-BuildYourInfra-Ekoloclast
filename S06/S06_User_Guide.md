@@ -100,7 +100,7 @@ Pour avoir un affichage à 4 colonnes, aller dans *System* puis *General Setup* 
 - On arrive sur le résumer et on valide.
 
 
-## Migration de la sauvegarde Addax
+## Migration de la sauvegarde Addax vers Fuligule
 
 
 ### Étapes pour automatiser Robocopy avec le Planificateur de tâches :
@@ -122,7 +122,23 @@ Pour avoir un affichage à 4 colonnes, aller dans *System* puis *General Setup* 
           - Cliquez sur **Nouveau** pour ajouter une action.
         - Dans **Programme/script**, tapez `robocopy`.
         - Dans **Ajouter des arguments**, entrez votre commande Robocopy sans le mot robocopy: "E:\Backup_addax" "\\Fuligule\G$\Backup\addax" /E /XO /LOG:C:\log\Log.txt
+  
+## Backup Galago et migration vers Saola
 
+### création backup Galago
+
+1. **création du dossier**
+     - Mkdir /mnt/backup
+2. **création backup**
+     - Rsync -aAXv --exclude=/mnt /mnt/backup
+
+### Migration backup Galago vers Saola
+
+1. **droit d'accès**
+     - chmod -R 777 <nom backup>
+2. **migration backup**
+     - rsync -avz --no-t -e 'ssh -p 22' /mnt/backup/ toto@172.24.255.9:/mnt/backups/galago
+   
 
 ## Utilisation de PRTG
 
