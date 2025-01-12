@@ -90,7 +90,7 @@ Pour **C_Software_Computer_InstallLAPS**, dans *Computer Configuration*, *Polici
 ### Sur le PC Windows 10, Configurer Graylog pour recevoir les logs Windows :
 - Entrer le lien sur un navigateur web pour se connecter au serveur Graylog : http://172.24.255.10:9000
 
-Mètre le compte admin et le mdp :
+Mettre le compte admin et le mdp :
 - Username : admingraylog
 - Password : Azerty1*
 
