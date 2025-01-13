@@ -87,7 +87,7 @@ Les widgets à rajouter (en cliquant sur le "+" de "Status/Dashboard" et sur le 
 
 Pour avoir un affichage à 4 colonnes, aller dans *System* puis *General Setup* puis **Dashboard Columns**.  
 
-## Création backup Addax
+## Création backup Addax et Fuligule
 
 - Pour installer Windows Server Backup, nous allons dans ajout de fonctionnalités puis nous choisissons dans fonctionnalités `windows server backup` .
 - Ensuite il faut lancer windows server backup dans tools.
@@ -98,6 +98,36 @@ Pour avoir un affichage à 4 colonnes, aller dans *System* puis *General Setup* 
 - Pour pouvoir migrer la sauvegarde ailleurs, nous sélectionnons `Back up to a volume`.
 - Pour l'étape suivante, on choisit le disque ou va être stocké la sauvegarde, ici nous utilisons le second disque du serveur.
 - On arrive sur le résumer et on valide.
+
+### Migration sauvegarde Addax et Fuligule sur Saola
+
+1. On crée sur Saola un utilisateur toto
+   - Adduser toto
+2. On autorise l'utilisateur sans Samba
+   - smbpasswd -a toto
+3. On ajoute les droits de lecture et ecriture a l'utilisateur
+   - chmod -R 777 /mnt/backups
+4. sur chaque serveur windows, on crée un lecteur mappé à destination de Saola et leur dossier respectif.
+   - Clique droit sur `this pc` -> `Map network drive`
+   - On choisit la lettre souhaitée, puis on tappe le chemin vers Saola \\Saola\Backups\Addax
+   - Une fenêtre apparait et on rentre les logs de toto.
+5. On va créer une sauvegarde incrementielle en allandans clique droit sur démarrer -> computer management -> Task Scheduler library -> Microsoft -> Windows -> backup
+   - clique droit sur `create new task`
+     1. **General**
+        - Cocher `run with hightest privileges`
+     2. **Triggers**
+        - New et on choisis daily et l'heure soulaitée.
+     3. **Actions**
+        - New
+        - Program/script : robocopy
+        - Add arguments : "F:\WindowsImageBackup" "\\Saola\backups\Fuligule" /E /XO /LOG:C:\Log\log.txt
+     4. **Conditions**
+        - on coche `wake the computer to run this task`
+        
+     5. **Settings**
+        - On coche `Allow task to be run on demand`
+
+
 
 
 ## Migration de la sauvegarde Addax vers Fuligule
