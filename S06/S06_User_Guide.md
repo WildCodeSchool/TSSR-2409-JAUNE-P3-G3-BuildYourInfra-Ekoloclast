@@ -159,6 +159,7 @@ Pour avoir un affichage à 4 colonnes, aller dans *System* puis *General Setup* 
 
 1. **création du dossier**
      - Mkdir /mnt/backup
+     - mount /dev/mvg/raid_backup
 2. **création backup**
      - Rsync -aAXv --exclude=/mnt /mnt/backup
 
