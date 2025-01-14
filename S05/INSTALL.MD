@@ -93,8 +93,8 @@ espace personnel sur le serveur.
   -faire la mêle manipulation pour le second disque
 3. On installe lvm avec `apt install lvm2`
 4. On commence par créer un volume physique en tappant `pvcreate /dev/sda1 /dev/sdb1`\
-5.Ensuite on crée un groupe de volume que l'onnommera mvg `vgcreate mvg /dev/sda1 /dev/dsb1`\
-6.On crée le raid 1 que l'on nommera raid_backup ainsi `lvcreate --mirrors 1 --type raid1 -l 100%FREE --nosync -n raid_backup mvg`\
+5. Ensuite on crée un groupe de volume que l'onnommera mvg `vgcreate mvg /dev/sda1 /dev/dsb1`\
+6. On crée le raid 1 que l'on nommera raid_backup ainsi `lvcreate --mirrors 1 --type raid1 -l 100%FREE --nosync -n raid_backup mvg`\
 
 ### 3 - Mettre en place une sauvegarde du volume qui contient les dossiers partagés des utilisateurs
 
