@@ -147,7 +147,74 @@ Sauvegardez les changements et redémarrez le service NXLog à partir d'une cons
 - Si On clique sur un log dans la liste, vous pouvez visualiser son contenu. Cela revient à consulter le journal à partir de l'Observateur d'événements de Windows.
 - Pour rafraichir la liste automatiquement toutes les 5 secondes. Aller sur "Not updating".
 
+## Configurer Graylog pour recevoir les logs Linux :
+### Sur le PC Windows 10, Créer un Input pour Syslog : 
+- Sure l'interface de Graylog, aller sur System > Inputs > Select input > Syslog UDP.
+- cliquez sur le bouton vert "Launch new input".
+- Puis Mettre un titre et un port ou le port par defaut (514).
+
+![Graylog](/Ressources/S06_GraylogLinuxInput.png)
+
+![Graylog](/Ressources/S06_GraylogLinuxInput2.png)
+- Cocher l'option "Store full message" et laisser le reste par défaut puis cliquez sur "Launch Input".
+- Le nouvel Input a été créé.
+
+### Créer un nouvel Index Linux :
+- A partir de Graylog, cliquez sur System > Indices > Create index set.
+- Nommez cet index, par exemple "Linux Index", ajoutez une description et un préfixe puis valider.
+![Graylog](/Ressources/S06_GraylogLinuxIndex.png)
+
+### Créer un Stream :
+- A partir de Graylog, cliquez sur Streams > Create stream.
+- Nommez le stream, par exemple "Linux Stream" et choisissez l'index "Linux Index" pour le champ nommé "Index Set" puis Validez.
+![Graylog](/Ressources/S06_GraylogLinuxStream.png)
+
+- Toujour dans "Streams" dans le menu. Désendre en bas de la liste, puis sur la ligne correspondante à votre stream (Linux Stream), cliquez sur More > Manage Rules > Add stream rule.
+- Choisissez le type "match input" et sélectionnez l'Input Rsyslog en UDP créée précédemment. Validez avec le bouton "Create Rule".
+- Puis cliquez sur "I’m done !" pour retourner sur le menu de "Streams".
+
+![Graylog](/Ressources/S06_GraylogLinuxStreamRule.png)
+
+- Cliquez sur "Pause" pour le maitre en "Running" pour activiez le "Linux Stream".
+
+![Graylog](/Ressources/S06_GraylogLinuxStreamRunning.png)
+
+### Installer et configurer Rsyslog sur le serveur Debian 12 :
+Mettre à jour le cache des paquets et installer le paquet rsyslog :
+```
+apt-get update
+```
+```
+apt-get install rsyslog
+```
+
+Vérifiez le statut du service. En principal, il est déjà en cours d'exécution :
+```
+systemctl status rsyslog
+```
+Dans ce répertoire, nous allons créer le fichier intitulé "10-graylog.conf" :
+```
+sudo nano /etc/rsyslog.d/10-graylog.conf
+```
+Dans ce fichier, insérez cette ligne :
+```
+*.* @172.24.255.10:12514;RSYSLOG_SyslogProtocol23Format
+```
+Autre Informations :
+- 172.24.255.10:12514: indique l’adresse du serveur Graylog, ainsi que le port sur lequel on envoie les logs (correspondant à l'Input).
+
+Une foix fait, enregistrez le fichier et redémarrez Rsyslog :
+```
+sudo systemctl restart rsyslog.service
+```
+
+### Sur le PC Windows 10, Afficher les journaux Linux dans Graylog :
+- Toujours dans "Streams", aller sur le stream créée (Linux Stream) et cliquez dessus.
+- Des journaux sont bien envoyés par la machine Linux.
+![Graylog](/Ressources/S06_GraylogLinuxStreamJournaux.png)
+
 --- 
+
 ## Installation et configuration de PRTG
 ### Installation PRTG
 
