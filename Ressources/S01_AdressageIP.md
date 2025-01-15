@@ -9,11 +9,11 @@ Ekoloclast - 172.24.0.0/16
 | 172.24.255.2 | Addax | AD principal - DHCP- DNS |
 | 172.24.255.3 | |  |
 | 172.24.255.4 | |  |
-| 172.24.255.5 | |  |
+| 172.24.255.5 | Pangolin | Serveur de gestion de mots de passe |
 | 172.24.255.6 | Galago | Serveur GLPI |
-| 172.24.255.7 |  |  |
+| 172.24.255.7 | Manakin | Serveur de messagerie |
 | 172.24.255.8 | Fuligule | Serveur de  fichiers |
-| 172.24.255.9 | Saloa | Serveur de saivegarde |
+| 172.24.255.9 | Saloa | Serveur de sauvegarde |
 | 172.24.255.10 | Johora | Serveur de journalisation |
 | 172.24.255.253 | Adresse du routeur |  |
 | 172.24.255.254 | Adresse de Broadcast  |  |  
@@ -34,7 +34,7 @@ Ekoloclast - 172.24.0.0/16
 | 172.24.16.0 |  | Adresse Réservée |
 | 172.24.16.1 à 240 |  | Plage DHCP Client |
 | 172.24.16.241 à 251 |  | Plage réservée Équipement |
-| 172.24.16.252 | P0001 | PC réservé à la supervision réseau |
+| 172.24.16.252 | P0001 | PC réservé à la supervision réseau - Serveur PRTG |
 | 172.24.16.253 | Adresse du routeur |  |
 | 172.24.16.254 | Adresse de Broadcast |  |
 
