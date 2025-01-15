@@ -1,5 +1,47 @@
 # TSSR-2409-JAUNE-P3-G3-BuildYourInfra-Ekoloclast
 
+## 0- Récapitulatif des documentations
+## Convention
+
+| Sujet | Lien | État |
+| :--: | :--: | :--: |
+| Convention de nommage | [lien](./Ressources/S01_ConventionNommage.md) | À jour (S07) |
+| Adressage IP | [lien](./Ressources/S01_AdressageIP.md) | À jour (S07) |
+| Table de routage | [lien](./Ressources/S01_TableDeRoutage.md) | À jour (S03) |
+| Liste des matériels | [lien](./Ressources/S02_ListeMatériels) | **À refaire** (S03) |
+
+
+## Fichiers d'installation 
+
+| Sujet | Lien | État |
+| :--: | :--: | :--: |
+| Serveur AD - DHCP - DNS | [lien](./S02/S02_Install.md) | À jour (S07) |
+| Serveur AD Core | [lien](./S02/S02_Install.md) | A jour (S07) |
+| Serveur GLPI | [lien](./S03/S03_Install.MD) | A jour (S07) |
+| Client | [lien](./S02/S02_Install.md) | À jour (S07) |
+| GPO | [lien](./S03/S03_User_Guide.md) | À jour (S07) |
+| Ajout d'utilisateur AD | [lien](./S03/S03_User_Guide.md) | À jour (S07) |
+| Routeur VyOS | [lien](./S04/S04_Install.md) | A jour (SO7) |
+| PfSense | [lien](./S04/S04_Install.md) | **À vérifier** (SO7) |
+| Mise en place du stockage avancé | [lien](./S05/S05_Install.md) | A jour (SO7) |
+| Serveur de fichier | [lien](./S06/S06_Install.md) | A jour (SO7) |
+| Configuration GrayLog | [lien](./S06/S06_Install.md) | A jour (SO7) |
+| Configuration PRTG | [lien](./S06/S06_Install.md) | A jour (SO7) |
+| GPO Télémétrie et restriction horaire | [lien](./S06/S06_User_Guide.md) | À jour (S07) |
+| Utilisation PRTG| [lien](./S06/S06_User_Guide.md) | À jour (S07) |
+| Dashboard PfSense | [lien](./S06/S06_User_Guide.md) | À jour (S07) |
+| Serveur de sauvegarde | [lien](./S06/S06_User_Guide.md) | À jour (S07) |
+| Serveur de messagerie | [lien](./S07/S07_Install.md) | À jour (S07) |
+
+
+## Fichiers d'utilisation pour les utilisateurs
+| Sujet | Lien | État |
+| :--: | :--: | :--: |
+| Ticket d'incident | [lien](./S03/S03_User_Guide.md) | À jour (S07) |
+| Utilisation de la messagerie | [lien](./S07/S07_Install.md) | À jour (S07) |
+
+
+
 ## 1- Présentation du projet, objectifs finaux
 L'objectif de ce projet est de créer un réseau pour une entreprise en partant d'une base plutôt vide. Nous devrons donc : 
 - Définir les besoins
@@ -98,5 +140,18 @@ Nous avons un problème de SID avec le Windows Server Core. Cela a entrainé une
 
 Pour le serveur PRTG, nous avons choisi le protocole SNMP car il est multi-OS. Nous n'avons pas encore réussi à déployer SNMP sur une Débian.  
 Le serveur de sauvegarde Saloa devait être un Bareos, mais suite à trop de complications, nous avons migré sur un Samba. Cela a retardé notre avancée dans cet objectif principal.  
+
+### Le Sprint 7 - 11/01/2025 au 17/01/2025
+
+| Équipe   | Rôle  | Sauvegarde de données | Nouveau fichier utilisateurs | Gestion des logs centralisée | Mise en place d'un serveur de messagerie | Mise en place gestion des mdp | Installation suivi de projet | Déplacement automatique des PC dans les OU |
+| :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| | | Principal | Secondaire | Secondaire | Principal | Secondaire | Optionnel | Optionnel |
+|  Lamine  | PO |  |  |  |  | X |  |  |
+| Baudouin | Membre |  |  | X |  |  |  |  |
+| Charlène | SM |  | X |  | X |  |  |  |
+| Anthony  | Membre | X |  |  |  |  |  |  |
+| | | 100% le 16/01 | 50% au 15/01 | 100% le 15/01 | 100% le 15/01 | 25% au 16/01 | 0% au 16/01 | 75% au 16/01 |
+
+Nous avons choisi iRedMail et Thunderbird pour leur Open Source et leur popularité.  Nous n'avons pas réussi à ajouter l'AD à iRedMail suite à de nombreuses erreurs LDAP.   
 
 ## 4- Améliorations possibles
