@@ -1,14 +1,11 @@
 # TSSR-2402-P3-G3-EKOLOCLAST
 
-## installation serveur Fuligule
+## Installation serveur de fichiers Fuligule
 
 1. On utilise le modèle 698-WindowsServer2022 pour le clone (full clone)
 2. On ajoute : - une carte réseau
                - Deux disques hdd (32Go)
-3. On lance la Vm, on change dans un premier temps le nom de l'odinateur par Fuligule.
-
-
-## Install guide Infrastructure sécurisée pour Ekoloclast
+3. On lance la VM, on change dans un premier temps le nom de l'odinateur par Fuligule.
 
 ### 1 - Mettre en place des dossiers réseaux pour les utilisateurs
 
@@ -17,7 +14,7 @@
 Pour commencer, on ajoute un disque dur virtuel à la vm filigule. Le disque est formaté et se nomme Ad_stockage.
 
 #### Mappage du lecteur réseau i
-![](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P3-G3-BuildYourInfra-Ekoloclast/blob/main/Ressources/S05_Gpomap.png)
+![](/Ressources/S05_Gpomap.png)
 
 1. Nous créons un dossier dans le disque installé, qui nous nommerons Utilisateurs. Clique droit sur le dossier et on selectionne `propriétés`.
 2. Aller sur l'onglet sharing et selectionner  partage avancé
