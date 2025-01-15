@@ -33,7 +33,7 @@ Pour chaque sous-dossier :
 - Cocher la case "Share this folder" et mettre le nom du dossier suivi d'un "$" en *ShareName*.
 
 - Dans "Permissions", retirer "Everyone" et ajouter le groupe de sécurité concerné par ce dossier, "GrpAdmins_Ekoloclast" et "Administrators" avec des droits *FullControl*.  
-![Droits du dossier UService](/Ressources/S06_DroitsService.png)
+![Droits du dossier UService](/Ressources/S06_DroitService.png)
 
 - Dans l'onglet "Security", aller dans "Advanced", cliquer sur "disable inheritance" et ajuster les droits pour avoir le même résultat que sur l'image ci-dessous.  
 ![Sécurité du dossier UService](/Ressources/S06_SécuritéService.png)  
