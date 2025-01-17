@@ -32,13 +32,15 @@
 | Dashboard PfSense | [lien](./S06/S06_User_Guide.md) | À jour (S07) |
 | Serveur de sauvegarde | [lien](./S06/S06_User_Guide.md) | À jour (S07) |
 | Serveur de messagerie | [lien](./S07/S07_Install.md) | À jour (S07) |
+| Modification liste RH | [lien](./S07/S07_Install.md) | À jour (S07) |
 
 
 ## Fichiers d'utilisation pour les utilisateurs
 | Sujet | Lien | État |
 | :--: | :--: | :--: |
+| Connexion à un compte utilisateur| [lien](./S07/S07_UserGuide.md) | À jour (S07) |
 | Ticket d'incident | [lien](./S03/S03_User_Guide.md) | À jour (S07) |
-| Utilisation de la messagerie | [lien](./S07/S07_Install.md) | À jour (S07) |
+| Utilisation de la messagerie | [lien](./S07/S07_UserGuide.md) | À jour (S07) |
 
 
 
@@ -150,7 +152,7 @@ Le serveur de sauvegarde Saloa devait être un Bareos, mais suite à trop de com
 | Baudouin | Membre |  |  | X |  |  |  |  |
 | Charlène | SM |  | X |  | X |  |  |  |
 | Anthony  | Membre | X |  |  |  |  |  |  |
-| | | 100% le 16/01 | 50% au 15/01 | 100% le 15/01 | 100% le 15/01 | 25% au 16/01 | 0% au 16/01 | 75% au 16/01 |
+| | | 100% le 16/01 | 100% au 17/01 | 100% le 15/01 | 100% le 15/01 | 75% au 17/01 | 0% au 16/01 | 75% au 17/01 |
 
 Nous avons choisi iRedMail et Thunderbird pour leur Open Source et leur popularité.  Nous n'avons pas réussi à ajouter l'AD à iRedMail suite à de nombreuses erreurs LDAP.   
 
