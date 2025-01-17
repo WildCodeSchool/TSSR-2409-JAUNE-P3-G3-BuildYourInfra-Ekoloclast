@@ -1,4 +1,11 @@
 # Ekoloclast
+## Connexion à son compte utilisateur
+
+Votre login de connexion est le nom de famille que vous avez fourni à votre arrivée, sans les caractères spéciaux ni espace, suivi d'un point et des trois premières lettres de votre prénom.  
+Par exemple, Jean-René Du Pré sera "dupre.jea".  
+Votre mot de passe initial est Azerty1*. Vous devez le changer immédiatement pour un mot de passe plus sécurisé : u moins 9 caractères dont des caractères spéciaux. Il sera changé tous les 90 jours maximum et ne pourra pas être réutilisé.  
+Vous pouvez vous renseigner aux bonnes pratiques à ce [lien](https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/mots-de-passe). 
+
 
 ## Utilisation du service de messagerie
 Sur le bureau, se trouve le raccourci de Thunderbird.  
