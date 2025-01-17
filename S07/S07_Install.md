@@ -25,3 +25,16 @@ Créer une GPO **C_Software_Computer_InstallThunderbird** appliquée sur l'OU *O
 Télécharger le fichier d'installation MSI à ce [lien](https://www.thunderbird.net/fr/download/) et le placer dans un dossier partagé.  
 Puis sélectionner ce fichier dans *Computer*, *Policies* et *Software*.
 
+## Mise à jour du fichier RH
+
+Pour les changements de noms et/ou d'emplacements des services et départements, cela est fait manuellement.
+Il ne faut pas oublier : 
+- changer le nom d'OU  
+- changer le nom de groupe  
+- deplacer l'OU et son groupe  
+- supprimer les utilisateurs du groupe de leur ancien emplacement  
+- modifier les noms et les autorisations des dossiers partagés de Fuligule  
+- modifier les GPO de mappage J et mappage K  
+
+La modification des utilisateurs se fait grâce à [ce script](/Ressources/S07_CreationUtilisateurs).   
+
