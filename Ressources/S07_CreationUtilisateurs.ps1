@@ -8,7 +8,7 @@ $FilePath = [System.IO.Path]::GetDirectoryName($MyInvocation.MyCommand.Definitio
 
 ### Parametre(s) à modifier
 
-$File = "$FilePath\S06_ListeEmployes.csv"
+$File = "C:\Script\S06_ListeEmployes.csv"
 
 # Fonction pour retirer les espaces et les caractères spéciaux
 Function FormatTxt {
@@ -47,31 +47,30 @@ Foreach ($User in $Users) {
     $Mobile = $User.Telportable
     
     # Chemin en fonction de Extérieur ou employé
+    $Path = "ou=$($User.Département),ou=Paris,ou=Utilisateurs,dc=Eko,dc=lan"
     if ($User.Société -ne "Ekoloclast")
     { $Path = "ou=Extérieur,ou=Utilisateurs,dc=Eko,dc=lan" }
-    else
-    { $Path = "ou=$($User.Département),ou=Paris,ou=Utilisateurs,dc=Eko,dc=lan" }
+    
     
     # Cherche si il existe un User avec le même prénom et DDN
-    $ExistingUser = Get-ADUser -Filter { ((GivenName -eq $GivenName) -and (Description -eq $Description)) }
+    $ExistingUser = Get-ADUser -Filter { ((GivenName -eq $GivenName) -and (Description -eq $Description)) } -Properties Title
     if ($ExistingUser) {
         # Si même prenom et même DDN
         if ($ExistingUser.Surname -eq $Surname) {
             # Si même nom
-            Set-ADUser -Identity $ExistingUser.SamAccountName -OfficePhone $OfficePhone -City $Location -Title $Title -MobilePhone $Mobile  `
-                -Path $Path -OtherAttributes @{Company = $Company; Department = $Department }
-            Write-Host "Mise à jour de l'utilisateur $SamAccountName (pas de changement de nom)" -ForegroundColor Blue
+            Set-ADUser -Identity $ExistingUser.SamAccountName -OfficePhone $OfficePhone -City $Location -Title $Title -MobilePhone $Mobile  -Company $Company -Department $Department
+            Write-Host "Mise à jour de l'utilisateur $SamAccountName (pas de changement de nom)" -ForegroundColor Green
         }
-        elseif ($ExistingUser.Title -eq $Title) {
+        elseif ($ExistingUser.Title -like $Title) {
             # si pas même nom mais même travail
-            Set-ADUser -Identity $ExistingUser.SamAccountName -Name $Name -DisplayName $DisplayName `
+            Set-ADUser -Identity $ExistingUser.SamAccountName -DisplayName $DisplayName `
                 -Surname $Surname -OfficePhone $OfficePhone -City $Location  -MobilePhone $Mobile `
-                -Path $Path -OtherAttributes @{Company = $Company; Department = $Department }
-            Write-Host "Création de l'utilisateur $SamAccountName (changement de nom)" -ForegroundColor Pink
+                -Company $Company -Department $Department
+            Write-Host "Création de l'utilisateur $SamAccountName (changement de nom)" -ForegroundColor Magenta
         }
         else {
             # doute sur même personne ou pas (même prenom et DDN mais travail et nom différents)
-            Write-Host "Doute sur la personne $Name avec les utilisateurs : $ExistingUser.Name " -ForegroundColor Red
+            Write-Host "Doute sur la personne $Name avec les utilisateurs : $ExistingUser " -ForegroundColor Red
             Write-Host "A traiter manuellement " -ForegroundColor Red
         }
         $SamAccountName = $ExistingUser.SamAccountName
@@ -94,7 +93,7 @@ Foreach ($User in $Users) {
             -Path $Path -AccountPassword (ConvertTo-SecureString -AsPlainText Azerty1* -Force) -Enabled $True `
             -OtherAttributes @{Company = $Company; Department = $Department } -ChangePasswordAtLogon $False
         
-        Write-Host "Création de l'utilisateur $SamAccountName" -ForegroundColor Green
+        Write-Host "Création de l'utilisateur $SamAccountName" -ForegroundColor Blue
     }
 
     #Ajout de l'utilisateur dans les groupes Utilisateurs / Paris / Département / Service (si existant)
@@ -107,17 +106,18 @@ Foreach ($User in $Users) {
         Add-ADGroupMember -Identity GrpUsers_$(FormatTxt $User.Service) -Members $SamAccountName
     }
 
-    $ModifiedUsers = $ModifiedUsers + $SamAccountName
+    $ModifiedUsers = $ModifiedUsers + " " + $SamAccountName
     $Count++
     sleep -Milliseconds 100
 }
 
 
-$ADUsers = Get-ADUser -Filter * -Properties SamAccountName -SearchBase "dn=Utilisateurs,dc=eko,dc=lan"
+$ADUsers = Get-ADUser -Filter * -SearchBase "ou=Utilisateurs,dc=eko,dc=lan"
 foreach ($ADUser in $ADUsers) {
-    if (!(Select-String $ModifiedUsers -Pattern $ADUser)) {
+    if (!($ModifiedUsers | Select-String -Pattern $ADUser.SamAccountName)) {
         # L'utilisateur n'a pas été modifié donc ne fait plus partie de la liste
-        Set-ADUser -Identity $ADUser -Path "OU=ComptesSuspendus,dc=eko,dc=eko" -Enabled $false
+        Disable-ADAccount -Identity $ADUser
+        Move-ADObject -Identity $ADUser -TargetPath "OU=CompteSuspendu,dc=eko,dc=eko" 
         Write-Host "Désactivation de l'utilisateur $ADUser" -ForegroundColor Yellow
     }
 }
