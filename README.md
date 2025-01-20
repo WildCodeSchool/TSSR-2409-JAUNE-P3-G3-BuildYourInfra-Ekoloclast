@@ -33,6 +33,8 @@
 | Serveur de sauvegarde | [lien](./S06/S06_User_Guide.md) | À jour (S07) |
 | Serveur de messagerie | [lien](./S07/S07_Install.md) | À jour (S07) |
 | Modification liste RH | [lien](./S07/S07_Install.md) | À jour (S07) |
+| Transfert des rôles FSMO | [lien](./S08/S08_Install.md) | À jour (S08) |
+| Bureau à distance | [lien](./S08/S08_UserGuide.md) | À jour (S08) |
 
 
 ## Fichiers d'utilisation pour les utilisateurs
@@ -155,5 +157,17 @@ Le serveur de sauvegarde Saloa devait être un Bareos, mais suite à trop de com
 | | | 100% le 16/01 | 100% au 17/01 | 100% le 15/01 | 100% le 15/01 | 75% au 17/01 | 0% au 16/01 | 75% au 17/01 |
 
 Nous avons choisi iRedMail et Thunderbird pour leur Open Source et leur popularité.  Nous n'avons pas réussi à ajouter l'AD à iRedMail suite à de nombreuses erreurs LDAP.   
+
+### Le Sprint 8 - 18/01/2025 au 24/01/2025
+
+| Équipe   | Rôle  | Transfert des rôles FSMO | Mise en place serveur WSUS | Gestion des connexions à distance | Mise en place d'un serveur FreePBX | Mise en place gestion des mdp | Installation suivi de projet | Déplacement automatique des PC dans les OU |
+| :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| | | Principal | Principal | Secondaire | Secondaire | Secondaire | Optionnel | Optionnel |
+|  Lamine  | Membre |  |  | X | X | X |  |  |
+| Baudouin | SM |  | X | X |  |  |  |  |
+| Charlène | PO | X |  |  |  |  |  | X |
+| Anthony  | Membre |  |  |  | X |  | X |  |
+| | | 100% le 20/01 |  | 50% au 20/01 |  | 75% au 20/01 |  | 75% au 20/01 |
+ 
 
 ## 4- Améliorations possibles
