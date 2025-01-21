@@ -309,31 +309,4 @@ show service snmp
 
 Pour faciliter les tâches d'installation et de mise à jour, Passbolt fournit un dépôt de paquets que vous devez configurer avant de télécharger et d'installer Passbolt CE.
 
-### Étape 1. Téléchargez le script d'installation des dépendances :
-
-`curl -LO https://download.passbolt.com/ce/installer/passbolt-repo-setup.ce.sh`
-
-### Étape 2. Téléchargez SHA512SUM pour le script d'installation :
-
-`curl -LO https://github.com/passbolt/passbolt-dep-scripts/releases/latest/download/passbolt-ce-SHA512SUM.txt`
-
-### Étape 3. Vérifiez que le script est valide et exécutez-le :
-
-
-`sha512sum -c passbolt-ce-SHA512SUM.txt && sudo bash ./passbolt-repo-setup.ce.sh || echo "Mauvais checksum. Abandon" && rm -f passbolt-repo-setup.ce.sh`
-
-
-## Installation du paquet Linux officiel passbolt
-
-
-`sudo apt install passbolt-ce-server`
-
-## Configuration de MariaDB
-
-Si vous n'êtes pas informé, le paquet Debian passbolt installera mariadb-server localement. Cette étape vous aidera à créer une base de données mariadb vide que passbolt peut utiliser.
-
-
-Le processus de configuration vous demandera les identifiants de l'utilisateur administrateur de MariaDB pour créer une nouvelle base de données. Par défaut, dans la plupart des installations, le nom d'utilisateur administrateur serait `root` et le mot de passe serait vide.
-
-Maintenant, nous devons créer un utilisateur mariadb avec des autorisations réduites pour que passbolt se connecte. Ces valeurs seront également demandées ultérieurement sur l'outil de configuration Web de passbolt, veuillez donc les garder à l'esprit.
 
