@@ -98,7 +98,7 @@ Maintenant, vous devez créer un utilisateur mariadb avec des autorisations réd
 
 ![image](/Ressources/s07_image2.png)
 
-Enfin,vous devons créer une base de données que passbolt peut utiliser, pour cela vous devez la nommer :
+Enfin,vous devez créer une base de données que passbolt peut utiliser, pour cela vous devez la nommer :
 
 ![image](/Ressources/s07_image3.png)
 
