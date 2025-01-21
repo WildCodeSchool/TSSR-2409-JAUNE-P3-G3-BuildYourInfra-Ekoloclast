@@ -96,6 +96,9 @@ Maintenant, vous devez créer un utilisateur mariadb avec des autorisations réd
 
 ![image](/Ressources/s07_image1.png)
 
+![image](/Ressources/s07_image2.png)
 
-![lp](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P3-G3-BuildYourInfra-Ekoloclast/tree/main/Ressources/s07_image1.png)
+Enfin,vous devons créer une base de données que passbolt peut utiliser, pour cela vous devez la nommer :
+
+![image](/Ressources/s07_image3.png)
 
