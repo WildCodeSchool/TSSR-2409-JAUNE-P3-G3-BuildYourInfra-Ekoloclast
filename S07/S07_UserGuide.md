@@ -37,5 +37,6 @@ Cela n'est pas recommandé.
 - Éviter d'utiliser des termes inappropriés ou offensants dans les courriels professionnels.  
 - Utiliser le courrier électronique de manière efficace et efficiente.  
 
+## Configuration passbolt
 
 
