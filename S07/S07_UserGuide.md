@@ -41,4 +41,4 @@ Cela n'est pas recommandé.
 
 Avant de pouvoir utiliser l'application, vous devez la configurer. Dirigez votre navigateur vers le nom d'hôte / ip où passbolt peut être atteint. Vous accéderez à une page de démarrage.
 
-![passbolt](/Ressources/S07_image4.png)
+![image](/Ressources/s07_image4.png)
