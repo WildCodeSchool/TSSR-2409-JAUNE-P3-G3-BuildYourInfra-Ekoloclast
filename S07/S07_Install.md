@@ -92,6 +92,6 @@ Si vous n'êtes pas informé, le paquet Debian passbolt installera mariadb-serve
 
 Le processus de configuration vous demandera les identifiants de l'utilisateur administrateur de MariaDB pour créer une nouvelle base de données. Par défaut, dans la plupart des installations, le nom d'utilisateur administrateur serait `root` et le mot de passe serait vide.
 
-Maintenant, nous devons créer un utilisateur mariadb avec des autorisations réduites pour que passbolt se connecte. Ces valeurs seront également demandées ultérieurement sur l'outil de configuration Web de passbolt, veuillez donc les garder à l'esprit.
+Maintenant, vous devez créer un utilisateur mariadb avec des autorisations réduites pour que passbolt se connecte. Ces valeurs seront également demandées ultérieurement sur l'outil de configuration Web de passbolt, veuillez donc les garder à l'esprit.
 
 
