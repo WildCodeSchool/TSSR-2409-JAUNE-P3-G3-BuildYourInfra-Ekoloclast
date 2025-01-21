@@ -41,17 +41,17 @@ Cela n'est pas recommandé.
 
 Avant de pouvoir utiliser l'application, vous devez la configurer. Dirigez votre navigateur vers le nom d'hôte / ip où passbolt peut être atteint. Vous accéderez à une page de démarrage.
 
-![image](/Ressources/s07_image3.png)
+![image](/Ressources/s07_image003.png)
 
 La première page de l'assistant vous dira si votre environnement est prêt pour le boulon de passe. Résolvez les problèmes le cas échéant et cliquez sur "Démarrer la configuration" lorsque vous êtes prêt.
 
 
-![image](/Ressources/s07_image4.png)
+![image](/Ressources/s07_image3.png)
 
 ### 2.1 Base de données
 
 Cette étape consiste à dire à passbolt quelle base de données utiliser. Entrez le nom d'hôte, le numéro de port, le nom de la base de données, le nom d'utilisateur et le mot de passe.
 
-![image](/Ressources/s07_image5.png)
+![image](/Ressources/s07_image4.png)
 
 
