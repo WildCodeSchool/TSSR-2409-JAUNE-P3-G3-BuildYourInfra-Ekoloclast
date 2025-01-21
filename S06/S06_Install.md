@@ -303,10 +303,5 @@ show service snmp
 ![SNMP sur Vyos](/Ressources/S06_SNMPVyos.png)  
 
 
-# Installation de Passbolt sur le conteneur Debian 12
-
-## Configuration du dépôt de paquets
-
-Pour faciliter les tâches d'installation et de mise à jour, Passbolt fournit un dépôt de paquets que vous devez configurer avant de télécharger et d'installer Passbolt CE.
 
 
