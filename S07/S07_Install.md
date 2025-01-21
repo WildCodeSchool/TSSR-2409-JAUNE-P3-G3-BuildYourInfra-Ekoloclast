@@ -94,4 +94,4 @@ Le processus de configuration vous demandera les identifiants de l'utilisateur a
 
 Maintenant, vous devez créer un utilisateur mariadb avec des autorisations réduites pour que passbolt se connecte. Ces valeurs seront également demandées ultérieurement sur l'outil de configuration Web de passbolt, veuillez donc les garder à l'esprit.
 
-![image](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P3-G3-BuildYourInfra-Ekoloclast/Ressources/s07_image1.webp)
+![image](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P3-G3-BuildYourInfra-Ekoloclast/Ressources/s07_image1.png)
