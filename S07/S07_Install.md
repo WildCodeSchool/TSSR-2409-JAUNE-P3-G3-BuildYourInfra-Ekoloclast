@@ -102,3 +102,11 @@ Enfin,vous devez créer une base de données que passbolt peut utiliser, pour ce
 
 ![image](/Ressources/s07_image3.png)
 
+
+
+## Configuration de Nginx pour servir HTTPS
+
+En fonction de vos besoins, il existe deux options pour configurer Nginx et SSL en utilisant le paquet Debian :
+
+- Automatique (Utilisation de Let's Encrypt)
+- Manuel (Utilisation de certificats SSL fournis par l'utilisateur)
