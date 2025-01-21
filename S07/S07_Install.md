@@ -38,3 +38,23 @@ Il ne faut pas oublier :
 
 La modification des utilisateurs se fait grâce à [ce script](/Ressources/S07_CreationUtilisateurs).   
 
+
+## Instalaltion Redmine
+
+1. Il faut installer mariadb `apt install mariadb-server`
+2. on test la conenction à la base de donnée en root avec `mysql -u root -p`
+   - création base de donnée -> create database redmine character set utf8mb4;
+   - création de l'utilisateur -> grant all privileges on redmine.* 'redmine'@'localhost' identified by 'Azerty1*';
+   - on echarge les privilèges des tables de droits -> flush privileges;
+   - exit
+3. on s'assure de la présence de la base de donnée dans le système `mysql -u redmine -p`
+4. Il faut ensuite installer apache `apt install apache2 libapache2-mod-passenger`
+5. On installe Redmine `apt install redmine redmine-mysql`. Une fenêtre apparait yes et on rentre le mot de passe.
+6. On install Gem bundler `gem install bundler`
+7. on crée une copie du fichierapache -> cp /usr/share/doc/redmine/examples/apache2-passenger-host.conf /etc/apache2/sites-avaible/redmine.conf
+8. On va configurer ce fichier -> nano /etc/apache2/sites-avaible/redmine.conf
+   -ServerName eko.lan
+9. ln -s /usr/share/redmine/public /var/www/html/redmine
+10. On active redmine sur apache `a2ensite redmine.conf` puis systemctl reload apache2
+11. on se conencte avec l'adresse ip du serveur.
+
