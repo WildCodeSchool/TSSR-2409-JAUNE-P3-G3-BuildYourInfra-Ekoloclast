@@ -72,7 +72,7 @@ Vous pouvez également tester que votre configuration est correcte en utilisant 
 
 ### 2.4 Préférences
 
-L'assistant vous demandera ensuite quelles préférences vous préférez pour votre instance de boulon. Les valeurs par défaut recommandées sont déjà pré-remplies, mais vous pouvez également les modifier si vous savez ce que vous faites.
+L'assistant vous demandera ensuite vos préférences. Les valeurs par défaut recommandées sont déjà pré-remplies, mais vous pouvez également les modifier si vous savez ce que vous faites.
 
 ![image](/Ressources/s07_image8.png)
 
