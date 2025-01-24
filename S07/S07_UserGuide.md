@@ -51,6 +51,7 @@ La première page de l'assistant vous dira si votre environnement est prêt pour
 ### 2.1 Base de données
 
 Cette étape consiste à dire à passbolt quelle base de données utiliser. Entrez le nom d'hôte, le numéro de port, le nom de la base de données, le nom d'utilisateur et le mot de passe.
+Dans notre cas le nom d'utlisateur sera `passboltadmin`,le nom de la base de donnée `passboltdb` et le nom d'hôte `localhost`
 
 ![image](/Ressources/s07_image4.png)
 
