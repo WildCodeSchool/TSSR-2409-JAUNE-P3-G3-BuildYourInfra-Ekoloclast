@@ -6,7 +6,7 @@
 | Sujet | Lien | État |
 | :--: | :--: | :--: |
 | Convention de nommage | [lien](./Ressources/S01_ConventionNommage.md) | À jour (S07) |
-| Adressage IP | [lien](./Ressources/S01_AdressageIP.md) | À jour (S07) |
+| Adressage IP | [lien](./Ressources/S01_AdressageIP.md) | À jour (S08) |
 | Table de routage | [lien](./Ressources/S01_TableDeRoutage.md) | À jour (S03) |
 | Liste des matériels | [lien](./Ressources/S02_ListeMatériels) | **À refaire** (S03) |
 
@@ -34,7 +34,10 @@
 | Serveur de messagerie | [lien](./S07/S07_Install.md) | À jour (S07) |
 | Modification liste RH | [lien](./S07/S07_Install.md) | À jour (S07) |
 | Transfert des rôles FSMO | [lien](./S08/S08_Install.md) | À jour (S08) |
-| Bureau à distance | [lien](./S08/S08_UserGuide.md) | À jour (S08) |
+| Bureau à distance - SSH | [lien](./S08/S08_UserGuide.md) | À jour (S08) |
+| Serveur de mots de passe | [lien](./S07/S07_Install.md) | À jour (S08) |
+| Transfert des rôles FSMO | [lien](./S08/S08_Install.md) | À jour (S08) |
+| Rangement des PC dans les OU | [lien](./S08/S08_Install.md) | À jour (S08) |
 
 
 ## Fichiers d'utilisation pour les utilisateurs
@@ -163,11 +166,12 @@ Nous avons choisi iRedMail et Thunderbird pour leur Open Source et leur populari
 | Équipe   | Rôle  | Transfert des rôles FSMO | Mise en place serveur WSUS | Gestion des connexions à distance | Mise en place d'un serveur FreePBX | Mise en place gestion des mdp | Installation suivi de projet | Déplacement automatique des PC dans les OU |
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 | | | Principal | Principal | Secondaire | Secondaire | Secondaire | Optionnel | Optionnel |
-|  Lamine  | Membre |  |  | X | X | X |  |  |
+|  Lamine  | Membre |  |  | X |  | X |  |  |
 | Baudouin | SM |  | X | X |  |  |  |  |
 | Charlène | PO | X |  |  |  |  |  | X |
 | Anthony  | Membre |  |  |  | X |  | X |  |
-| | | 100% le 20/01 |  | 50% au 20/01 |  | 75% au 20/01 |  | 75% au 20/01 |
- 
+| | | 100% le 20/01 | 75% au 24/01 | 100% le 23/01 | 75% au 24/01 | 100% le 21/01 | 100% le 21/01 | 100% le 21/01 |
+
+ Nous avons des erreurs concernant le serveur RPC. Nous n'avons pas encore réussi à les résoudre. Cela a peut être engendré les erreurs sur Passbolt, qui n'arrive plus à envoyer des mails par notre serveur SMTP.  
 
 ## 4- Améliorations possibles
