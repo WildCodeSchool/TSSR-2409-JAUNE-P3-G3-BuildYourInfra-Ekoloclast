@@ -39,3 +39,51 @@ Il faut télécharger ce [script](/Ressources/S08_ScriptPlacementPC.ps1) et le p
 Il faut ensuite créer une tache dans **Task Scheduler** qui se lance quotidiennement à 3h00, en lancant le programme "Powershell" , en option "C:\Script\S08_ScriptPlacementPC.ps1".  
 
 Le script range automatiquement les PC autorisés dans l'OU PC portable dans l'OU Paris. Cela sera à modifier en cas de changement de l'infrastructure.  
+
+---
+
+## Installation et configuration de WSUS
+
+### Les Prérequis :
+-  Serveur configuré (Renommer, IP, Horaire, Ajouter au Domaine, Active Directory).
+- Ajouté un disque avec un espace de 20 Go formatée qui se nomme WSUS.
+- Sur ce disque, créer un dossier WSUS
+
+### Installation du rôle WSUS sur le serveur WSUS :
+- Installée le rôle Windows Server Update Services.
+- Valide les fonctionnalités supplémentaires qui vont s'ajouter automatiquement.
+- Sélectionne WID Connectivity et WSUS Service.
+- Indique le dossier que tu as créer pour l'emplacement du stockage des mises à jour.
+- Termine l'installation et redémarre le serveur.
+
+### Configuration du service WSUS :
+- Une fois le serveur redémarré, lance la tâche Post Deployment Configuration for WSUS dans le Server Manager.
+- Ensuite, dans la fenêtre de gauche, vas dans WSUS.
+(Mettre une image)
+- Avec le bouton droit sélectionne Windows Server Update Services cela va lancer automatiquement l'assistant de configuration.
+
+##### Une fois l’assistance lancée :
+
+- Décoche la case « Yes, I would like to join the Microsoft Update Improvement Program »
+- Laisse sélectionné la case « Synchronize from Microsoft Update »
+- Ne mets pas de proxy
+- À la fin, clic sur « Start Connecting ». 
+- Après, sélectionne les langues « English » et « French »
+- Sélectionne les produits de mises à jour Windows 10 et les serveurs
+- Pour les classifications laisse les choix par défaut
+- Pour la synchronisation, choisi 4 synchronisations par jour, à partir de 2h.
+- Enfin coche la case « Begin initial synchronization » et clic sur `Finish
+
+-Clic sur le nom de ton du serveur dans la fenêtre, et tu as l'état de la synchronisation avec le widget Synchronization Status.
+
+(Mettre une image)
+
+-La Synchronization peu durée environs 1 heure.
+
+- Une foix fait, va dans Options, puis Automatic Approvals.
+- Dans l'onglet Update Rules, cocher Default Automatic Approval Rule.
+- Cliquer sur Run Rules puis Cliquer sur Apply et OK
+
+### Configuration sur WSUS
+
+
