@@ -8,13 +8,14 @@ Ekoloclast - 172.24.0.0/16
 | 172.24.255.1 | Axolotl  | AD - DNS |
 | 172.24.255.2 | Addax | AD principal - DHCP- DNS |
 | 172.24.255.3 | Anolis | AD |
-| 172.24.255.4 | |  |
+| 172.24.255.4 | Wallaby | Serveur de mises à jour |
 | 172.24.255.5 | Pangolin | Serveur de gestion de mots de passe |
 | 172.24.255.6 | Galago | Serveur GLPI |
 | 172.24.255.7 | Manakin | Serveur de messagerie |
 | 172.24.255.8 | Fuligule | Serveur de  fichiers |
-| 172.24.255.9 | Saloa | Serveur de sauvegarde |
+| 172.24.255.9 | Saloa | Serveur de sauvegarde - Serveur de gestion de projets |
 | 172.24.255.10 | Johora | Serveur de journalisation |
+| 172.24.255.11 | Tigre | Serveur de téléphonie VOIP |
 | 172.24.255.253 | Adresse du routeur |  |
 | 172.24.255.254 | Adresse de Broadcast  |  |  
 
