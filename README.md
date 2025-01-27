@@ -174,4 +174,17 @@ Nous avons choisi iRedMail et Thunderbird pour leur Open Source et leur populari
 
  Nous avons des erreurs concernant le serveur RPC. Nous n'avons pas encore réussi à les résoudre. Cela a peut être engendré les erreurs sur Passbolt, qui n'arrive plus à envoyer des mails par notre serveur SMTP.  
 
+ ### Le Sprint 9 - 25/01/2025 au 31/01/2025
+
+| Équipe   | Rôle  | Mise en place serveur WSUS | Mise en place d'un serveur FreePBX | Mise en place d'un serveur Web | VPN site à site | PARTENARIAT D'ENTREPRISE - Active Directory | PARTENARIAT D'ENTREPRISE - Stockage | 
+| :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| | | Principal | Principal | Secondaire | Principal | Secondaire | Optionnel |
+|  Lamine  | SM |  |  | X | X |  | X |
+| Baudouin | Membre | X |  |  |  | X |  |
+| Charlène | Membre | |  | X | X |  | X |
+| Anthony  | PO | X | X |  |  | X | |
+| | | 75% au 27/01 | 75% au 27/01 |  | | |  |
+
+Notre société entame un partenariat avec l'entreprise Pharmgreen.  
+
 ## 4- Améliorations possibles
