@@ -16,12 +16,13 @@ Remarque : pour se connecter à distance, il faut avoir un compte avec les droit
 - Exemple : EKO\administrator
 
 
-## Prendre le contrôle d'un serveur via SSH
+## Prendre le contrôle d'un serveur Débian via SSH
 
 Dans un premier temps rendez-vous dans le fichier `sshd_config` en faisant `nano /etc/ssh/sshd_config`.
 
 Une fois dedans,il faudra faire les modifications comme sur la capture d'écran ci-dessous.
 
+![SSH](/Ressources/S08_SSH.png)
 
 Vous pouvez désormais prendre le contrôle de votre machine serveur.
 
