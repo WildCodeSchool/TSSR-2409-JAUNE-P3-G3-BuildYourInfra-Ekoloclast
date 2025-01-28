@@ -14,3 +14,14 @@ Remarque : pour se connecter à distance, il faut avoir un compte avec les droit
 - Exemple : Axolotl.eko.lan ou Axolotl (fonctionne aussi).
 - Sure la partie « User name » il faut mettre le domaine\le compte pour se connecter.
 - Exemple : EKO\administrator
+
+
+## Prendre le contrôle d'un serveur via SSH
+
+Dans un premier temps rendez-vous dans le fichier `sshd_config` en faisant `nano /etc/ssh/sshd_config`.
+
+Une fois dedans,il faudra faire les modifications comme sur la capture d'écran ci-dessous.
+
+
+Vous pouvez désormais prendre le contrôle de votre machine serveur.
+
