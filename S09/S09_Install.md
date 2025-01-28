@@ -67,4 +67,23 @@ Dans l'ordre :
 
 ![Certificat](/Ressources/S09_Certificat2.png)  
 
+---
 
+## Installation et configuration du serveur web Wombat
+
+Sur un CT Débian en 172.24.254.1 (avec une carte réseau vmbr640), entrer les commandes : 
+```
+apt update && apt upgrade -y
+apt install apache2 -y
+```
+
+Puis aller dans **/var/www/html**. Le fichier à modifier pour personnaliser la page par défaut est **index.html**.  
+Il existe des sites pour configurer des pages html sans connaissances, tel que **app.grapesjs.com**.  
+
+Les fichiers de configuration de la page Ekoloclast se trouve à [ce lien](/Ressources/S09_PageEkoloclast.zip).  
+Il faut les télécharger puis mettre les trois fichiers dans **/var/www/html**, en faisant une copie de la page "index.html" initiale.  
+![Page Ekoloclast](/Ressources/S09_PageEkolo.png)
+
+Le site est donc accessible, uniquement en interne, à l'adresse *http://172.24.254.1*. Il est conseillé de configurer un alias DNS.  
+
+Si le site n'est pas accessible, merci de vérifier les règles de pare-feu concernant le LAN et la DMZ.  
