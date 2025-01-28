@@ -23,7 +23,7 @@ Ekoloclast - 172.24.0.0/16
 |:---:|:---:|:---:|
 | Adresse IP | Nom | Commentaire |
 | 172.24.254.0 |  | Adresse Réservée |
-| 172.24.254.1 |  |  |
+| 172.24.254.1 | Wombat | Serveur Web |
 | 172.24.254.2 |  |  |
 | 172.24.254.3 |  |  |
 | 172.24.254.4 | Adresse du routeur |  |
