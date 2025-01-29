@@ -97,7 +97,8 @@ Dans l'arborescence des ordinateurs, sous All Computers, créer 2 groupes avec A
 ### Création des GPO clients et serveur :
 #### GPO client :
 
-Sur ton serveur WSUS, vas dans Tools > Group Policy Management > Group Policy Objet puis  créer une GPO :  C_Settings_Comupter_WSUS_Clients
+Sur ton serveur WSUS, vas dans Tools > Group Policy Management > Group Policy Objet puis  créer une GPO : C_Settings_Comupter_WSUS_Clients
+
 Va dans Computer Configuration > Policies > Administrative Templates > Windows Components > Windows update
 
 Va dans `Specify intranet Microsoft update service location`, qui indiquera où est le serveur de mise à jour.
