@@ -62,6 +62,8 @@ Le script range automatiquement les PC autorisés dans l'OU PC portable dans l'O
 (Mettre une image)
 - Avec le bouton droit sélectionne Windows Server Update Services cela va lancer automatiquement l'assistant de configuration.
 
+![WSUS](/Ressources/s08_WSUS_ConfigurationduService.png)
+
 ##### Une fois l’assistance lancée :
 
 - Décoche la case « Yes, I would like to join the Microsoft Update Improvement Program »
@@ -85,6 +87,9 @@ Le script range automatiquement les PC autorisés dans l'OU PC portable dans l'O
 - Cliquer sur Run Rules puis Cliquer sur Apply et OK
 
 ### Configuration sur WSUS
+
+
+
 
 ---
 
