@@ -86,7 +86,9 @@ Le script range automatiquement les PC autorisés dans l'OU PC portable dans l'O
 
 ### Configuration sur WSUS
 
-Étape 1 : Installation des dépendances
+---
+
+## Étape 1 : Installation des dépendances
 
    1. **Installer MariaDB et Apache2**  
     Ouvrez un terminal et exécutez les commandes suivantes pour installer MariaDB et Apache2 :
