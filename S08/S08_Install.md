@@ -46,7 +46,7 @@ Le script range automatiquement les PC autorisés dans l'OU PC portable dans l'O
 
 ### Les Prérequis :
 -  Serveur configuré (Renommer, IP, Horaire, Ajouter au Domaine, Active Directory).
-- Ajouté un disque avec un espace de 20 Go formatée qui se nomme WSUS.
+- Ajouté un disque avec un espace de 30 Go formatée qui se nomme WSUS.
 - Sur ce disque, créer un dossier WSUS
 
 ### Installation du rôle WSUS sur le serveur WSUS :
@@ -76,20 +76,85 @@ Le script range automatiquement les PC autorisés dans l'OU PC portable dans l'O
 - Pour la synchronisation, choisi 4 synchronisations par jour, à partir de 2h.
 - Enfin coche la case « Begin initial synchronization » et clic sur `Finish
 
--Clic sur le nom de ton du serveur dans la fenêtre, et tu as l'état de la synchronisation avec le widget Synchronization Status.
+- Clic sur le nom de ton du serveur dans la fenêtre, et tu as l'état de la synchronisation avec le widget Synchronization Status.
 
 (Mettre une image)
 
--La Synchronization peu durée environs 1 heure.
+- La Synchronization peu durée environs 1 heure.
 
 - Une foix fait, va dans Options, puis Automatic Approvals.
 - Dans l'onglet Update Rules, cocher Default Automatic Approval Rule.
 - Cliquer sur Run Rules puis Cliquer sur Apply et OK
 
 ### Configuration sur WSUS
+- Va dans Options, puis Computers.
+- Coche l'option Use Group Policy... et valide
 
+![WSUS](/Ressources/s08_WSUS_ConfigurationSurWSUS.png)
 
+Dans l'arborescence des ordinateurs, sous All Computers, créer 2 groupes avec Add Computer Group :
+- Grp-CLIENT-COMPUTER
+- Grp-SERVER
 
+![WSUS](/Ressources/s08_WSUS_ConfigurationSurWSUS2.png)
+
+### Création des GPO clients et serveur :
+#### GPO client :
+
+Sur ton serveur WSUS, vas dans Tools > Group Policy Management > Group Policy Objet puis  créer une GPO :  C_Settings_Comupter_WSUS_Clients
+Va dans Computer Configuration > Policies > Administrative Templates > Windows Components > Windows update
+
+Va dans `Specify intranet Microsoft update service location`, qui indiquera où est le serveur de mise à jour.
+- Coche `Enabled`
+- Dans les options, pour les 2 premiers champs, mettre l'URL avec le nom du serveur sous sa forme FQDN, ajouter le numéro du port 8530
+- Valide la configuration
+
+Va dans `Do not connect to any Windows Update Internet locations` qui bloque la connexion aux serveurs de Microsoft
+- Coche `Enabled` et valide la configuration
+- Le paramétrage ci-dessous est spécifique à cette GPO :
+- Va dans `Configure Automatic Updates`
+- Coche `Enabled`
+Dans les options mets :
+- Dans `Configure automatic updating » sélectionne « 4- Auto Download and schedule the install`
+- Dans `Scheduled install day` mets `0 - Every day`
+- Dans `Scheduled install time` mets `09:00`
+- Cocher `Every week`
+- Cocher `Install updates for other Microsoft Products`
+
+Aller dans `Enable client-side targeting` qui fait la liaison avec les groupes crées dans WSUS
+- Coche `Enabled`
+- Dans les options, mettre le nom du groupe WSUS pour les ordinateurs cible, donc Grp-CLIENT-COMPUTER
+- Valide la configuration
+
+Aller dans `Turn off auto-restart for updates during active hours` qui permet d'empêcher les machines de redémarrer après l'installation d'une mise à jour pendant leurs heures d'utilisations
+- Coche `Enabled`
+- Dans les options, mettre (par exemple) `8 AM - 6 PM`
+
+#### Une foix la GPO configurer :
+- Relier l’OU à la GPO (Ordinateurs)
+- ajouter le groupe concerner (Domaine Computer(EKO\DomaineCumputers)
+- Désactiver dans Details  : User Configuration settings disabled
+
+#### GPO serveur :
+- Fais la même chose avec une GPO « C_Settings_Comupter_WSUS_Servers » mais en modifiant la cible du groupe WSUS (Grp-SERVER).
+Pour copier une GPO avec Powershell  : 
+- Copy-GPO -SourceName C_WSUS_Config -TargetName C_WSUS_Config_TEST
+Une fois la GPO configurer :
+- Relier l’OU à la GPO (Domaine Controllers)
+- ajouter le groupe concerner (Domaine Controllers(EKO\ Domaine Controllers)
+- Désactiver dans Details  : User Configuration settings disabled
+
+### Vérification des GPO :
+- Sur chaque client, exécuter la commande avec le compte administrateur local gpupdate /force.
+- On peut vérifier si les GPO sont appliquée avec la commande gpresult /R ou avec la commande PowerShell Get-ItemProperty -Path 
+
+### Gestion des mises à jour :
+- Sur le serveur WSUS, va dans la partie Updates et sélectionne Security Updates.
+- Sélectionne des mises à jour et ouvre le menu d'approbation avec le bouton droit de la souris puis Approve.
+- Tu vas retrouver les groupes que tu as créer sous l'arborescence All Computers.
+- Tu peux pour chacun des groupes appliquer les différentes mises à jour ou bien les bloquer.
+
+![WSUS](/Ressources/s08_WSUS_GestionDesMisesAJour.png)
 
 ---
 
