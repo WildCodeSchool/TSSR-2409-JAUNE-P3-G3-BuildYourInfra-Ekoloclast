@@ -134,8 +134,10 @@ Aller dans `Turn off auto-restart for updates during active hours` qui permet d'
 
 #### GPO serveur :
 - Fais la même chose avec une GPO « C_Settings_Comupter_WSUS_Servers » mais en modifiant la cible du groupe WSUS (Grp-SERVER).
+
 Pour copier une GPO avec Powershell  : 
 - Copy-GPO -SourceName C_WSUS_Config -TargetName C_WSUS_Config_TEST
+
 Une fois la GPO configurer :
 - Relier l’OU à la GPO (Domaine Controllers)
 - ajouter le groupe concerner (Domaine Controllers(EKO\ Domaine Controllers)
