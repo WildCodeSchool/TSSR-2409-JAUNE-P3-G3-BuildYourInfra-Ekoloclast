@@ -86,4 +86,71 @@ Le script range automatiquement les PC autorisés dans l'OU PC portable dans l'O
 
 ### Configuration sur WSUS
 
+Étape 1 : Installation des dépendances
 
+   1. **Installer MariaDB et Apache2**  
+    Ouvrez un terminal et exécutez les commandes suivantes pour installer MariaDB et Apache2 :
+    
+    
+    
+    apt install mariadb-server
+    apt install apache2
+   2. **Télécharger le script d'installation de FreePBX**  
+    Accédez au répertoire `/tmp` et téléchargez le script d'installation de FreePBX :
+    
+    cd /tmp
+    wget https://github.com/FreePBX/sng_freepbx_debian_install/raw/master/sng_freepbx_debian_install.sh -O /tmp/sng_freepbx_debian_install.sh
+
+   3. Exécutez le script d'installation avec la commande suivante :
+
+    bash /tmp/sng_freepbx_debian_install.sh
+
+
+   ## Étape 2 : Configuration via l'interface web
+
+   1. **Accéder à l'interface web**  
+    Ouvrez un navigateur web et entrez l'adresse IP de votre serveur `172.24.255.11`.
+
+   2. **Connexion à FreePBX**
+    
+   Cliquez sur `FreePBX Administration`.
+        
+   Connectez-vous avec vos identifiants.
+
+   Ignorer l'activation et les offres commerciales
+    
+   Cliquez sur `Skip` pour ignorer l'activation du serveur et les offres commerciales.
+   Laissez tous les paramètres par défaut et cliquez sur `Submit`.
+   À la fenêtre d'activation du firewall, cliquez sur `Abort`.
+   À la fenêtre de l'essai de SIP Station, cliquez sur `Not Now`.
+   Allez dans `Menu` puis `System Admin`.
+   Un message indique que le système n'est pas activé. Cliquez sur `Activation`, puis `Activate` et de nouveau `Activate`.
+        
+
+## Étape 3 : Lier FreePBX à l'Active Directory (AD)
+
+1. **Accéder à la gestion des utilisateurs**
+    
+    - Allez dans `Admin` -> `User Management` puis `Directories`.
+        
+2. **Ajouter un annuaire LDAP**
+    
+    - Cliquez sur `Add` et remplissez les champs comme suit (en utilisant les informations de votre AD) :
+        
+        - **Directory name** : Nom que vous souhaitez donner à votre base de données.
+            
+        - **Hosts** : `172.24.255.2` (adresse IP du serveur AD).
+            
+        - **Port** : `389`.
+            
+        - **Username** : `Administrator`.
+            
+        - **Domain** : `eko.lan`.
+            
+        - **Base DN** : `dc=eko,dc=lan`.
+            
+3. **Vérification des utilisateurs**
+    
+    - Retournez dans `Users` pour voir la liste de vos utilisateurs AD.
+   
+    
