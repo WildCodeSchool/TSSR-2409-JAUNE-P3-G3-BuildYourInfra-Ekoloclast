@@ -142,8 +142,8 @@ Une fois la GPO configurer :
 - Désactiver dans Details  : User Configuration settings disabled
 
 ### Vérification des GPO :
-- Sur chaque client, exécuter la commande avec le compte administrateur local gpupdate /force.
-- On peut vérifier si les GPO sont appliquée avec la commande gpresult /R ou avec la commande PowerShell Get-ItemProperty -Path 
+- Sur chaque client, exécuter la commande avec le compte administrateur local `gpupdate /force`.
+- On peut vérifier si les GPO sont appliquée avec la commande `gpresult /R`.
 
 ### Gestion des mises à jour :
 - Sur le serveur WSUS, va dans la partie Updates et sélectionne Security Updates.
