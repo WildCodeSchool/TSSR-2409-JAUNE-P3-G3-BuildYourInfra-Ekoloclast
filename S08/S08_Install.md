@@ -74,12 +74,8 @@ Le script range automatiquement les PC autorisés dans l'OU PC portable dans l'O
 - Sélectionne une mises à jour pour Windows 10 et une mises à jour pour Windows serveurs 2022
 - Pour les classifications laisse les choix par défaut
 - Pour la synchronisation, choisi 4 synchronisations par jour, à partir de 2h.
-- Enfin coche la case « Begin initial synchronization » et clic sur `Finish
-
+- Enfin coche la case « Begin initial synchronization » et clic sur "Finish"
 - Clic sur le nom de ton du serveur dans la fenêtre, et tu as l'état de la synchronisation avec le widget Synchronization Status.
-
-(Mettre une image)
-
 - La Synchronization peu durée environs 1 heure.
 
 - Une foix fait, va dans Options, puis Automatic Approvals.
