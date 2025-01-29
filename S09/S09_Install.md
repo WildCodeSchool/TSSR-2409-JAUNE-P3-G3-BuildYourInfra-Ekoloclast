@@ -1,6 +1,35 @@
 # Ekoloclast
 
-# Création d'un serveur OPENVPN Site à Site
+## Création d'un serveur VPN avec des clés partagées
+
+Dans "VPN" et "OpenVPn", aller dans l'onglet "Servers", puis cliquer sur *Add*.  
+
+Dans l'ordre, rentrer :  
+- Description : **EKO-VPN avec Pharmgreen**  
+- Server Mode : **Peer to Peer (Shared Key)**  
+- Device Mode : **tun**  
+- Protocol : **UDP on IPv4 only**  
+- Interface : **WAN**  
+- Local Port : **1194**  
+- Shared key : **Check Automatically generate a shared key**  
+- Tunnel Network : **10.3.100.0/30**
+- Remote network : **10.15.0.0/16** (adresse de réseau LAN de Pharmgreen)  
+
+Sauvegarder et retourner dans l'édition de ce serveur : copier la clé et la partager à Pharmgreen (de façon sécurisée).  
+De son côté, Pharmagreen doit effectuer les démarches pour configurer son VPN Client. 
+
+Il faut mettre à jour les règles de pare-feu.  
+Dans l'interface WAN :  
+![Règle WAN](/Ressources/S09_RegleWAN.png)  
+Dans l'interface OpenVPN : (c'est une solution temporaire, il faudra sécuriser)  
+![Règle OpenVPN](/Ressources/S09_RegleVPN.png)    
+Il faut également ajouter les règles sur la LAN, pour ajouter le port 22222 par exmple (utilisé par l'autre société).  
+
+Tester la configuration en lançant un ping vers les machines de la société Pharmgreen.  
+
+---
+
+## Création d'un serveur OPENVPN en TLS
 
 ### Ajouter l'annuaire LDAP à PfSense
 Dans l'AD, ajouter le groupe "GrpUsers_AccessPfSense" dans l'OU "CompteDedie".  
@@ -66,6 +95,13 @@ Dans l'ordre :
 - Alternative Names : *FQND or Hostname* et *vpn.eko.lan*  
 
 ![Certificat](/Ressources/S09_Certificat2.png)  
+
+Dans "system" et "User Manager", créer un utilisateur *compte.vpn* et cocher la case "create an user certificate". La CA doit être *CA-EKO-OPENVPN*. Ajouter un "descriptive name" comme *USER-COMPTEVPN*.  
+
+![Compte VPN](/Ressources/S09_CompteVPN.png)
+
+Le nouveau certificat de cet utilisateur est apparu.  
+![Certificat de compte.vpn](/Ressources/S09_CompteVPN2.png)
 
 ---
 
