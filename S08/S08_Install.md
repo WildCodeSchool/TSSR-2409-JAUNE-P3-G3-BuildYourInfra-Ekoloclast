@@ -71,7 +71,7 @@ Le script range automatiquement les PC autorisés dans l'OU PC portable dans l'O
 - Ne mets pas de proxy
 - À la fin, clic sur « Start Connecting ». 
 - Après, sélectionne les langues « English » et « French »
-- Sélectionne les produits de mises à jour Windows 10 et les serveurs
+- Sélectionne une mises à jour pour Windows 10 et une mises à jour pour Windows serveurs 2022
 - Pour les classifications laisse les choix par défaut
 - Pour la synchronisation, choisi 4 synchronisations par jour, à partir de 2h.
 - Enfin coche la case « Begin initial synchronization » et clic sur `Finish
