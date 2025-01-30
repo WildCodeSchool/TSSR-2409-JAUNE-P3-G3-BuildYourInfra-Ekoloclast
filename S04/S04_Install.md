@@ -116,6 +116,7 @@ Sur une machine clonée du Template PfSense, dotée de trois cartes réseaux (vm
 
 - Configurer les alias :  
   ![PfSense Alias](/Ressources/S05_PfSense_Alias.png)
+  ![PfSense Alias](/Ressources/S05_PfSense_AliasAD.png)
 
 - Configurer les règles des trois interfaces : 
   ![PfSense LAN](/Ressources/S05_PfSense_LAN.png)  
