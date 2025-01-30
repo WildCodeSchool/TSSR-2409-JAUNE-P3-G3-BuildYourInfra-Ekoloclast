@@ -123,3 +123,29 @@ Il faut les télécharger puis mettre les trois fichiers dans **/var/www/html**,
 Le site est donc accessible, uniquement en interne, à l'adresse *http://172.24.254.1*. Il est conseillé de configurer un alias DNS.  
 
 Si le site n'est pas accessible, merci de vérifier les règles de pare-feu concernant le LAN et la DMZ.  
+
+
+--- 
+## Relation d'approbation avec Pharmgreen.lan
+
+Sur le pare-feu, ajouter une réseau à l'interface LAN pour autoriser les connexions utilisant les ports AD du réseau LAN de Ekoloclast vers le réseau LAN de Pharmgreen.  
+
+Sur le serveur DNS, dans "Conditional Forwarders", cliquer sur *New Conditional Forward*, avec **pharmgreen.lan** en domain DNS et **10.15.200.1** en adresse IP. Cocher la case "store the conditional forward in Active Directory", en laissant le choix par défaut.  
+![DNS](/Ressources/S09_DNS.png)  
+
+Dans "Active Directory Domains and Trusts", aller dans les propriétés de *eko.lan*. Dans l'onglet "Trusts", cliquer sur *New Trust*.  
+Dans la nouvelle fenêtre, cliquer sur *Next* et entrer le nom de domaine **pharmgreen.lan**, puis cliquer de nouveau sur *Next.  
+Choisir **External Trust**.  puis **Two-way** et enfin **Both this domain and the specified domain**.  
+Entrer les coordonnées d'un compte administrateur de *pharmgreen.lan*.  
+![Admin](/Ressources/S09_AdminPharm.png)  
+Selectionner **Domain-wide authentication** deux fois.  
+Cliquer deux fois sur *Next*.  
+Selectionner **Yes, confirm the outgoing trust** puis **Yes, confirm the incoming trust**.
+Cliquer sur *Finish* et fermer la fenêtre qui s'ouvre ensuite.  
+![Trust](/Ressources/S09_Trust.png)  
+
+De son côté, Pharmgreen doit également valider ce lien d'approbation.  
+Pour vérifier le bon fonctionnement, se connecter avec un utilisateur de Pharmgreen.lan sur un machine du domaine Eko.lan et inversement.  
+La relation d'approbation permet de visualiser et gérer l'AD de Pharmgreen. On peut même ajouter la forêt à la console *Group Policy Management*.   
+![GPO](/Ressources/S09_GPOPharm.png)  
+
