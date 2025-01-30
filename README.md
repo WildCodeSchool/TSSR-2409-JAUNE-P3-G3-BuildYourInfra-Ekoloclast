@@ -8,7 +8,7 @@
 | Convention de nommage | [lien](./Ressources/S01_ConventionNommage.md) | À jour (S07) |
 | Adressage IP | [lien](./Ressources/S01_AdressageIP.md) | À jour (S08) |
 | Table de routage | [lien](./Ressources/S01_TableDeRoutage.md) | À jour (S03) |
-| Liste des matériels | [lien](./Ressources/S02_ListeMatériels) | **À refaire** (S03) |
+| Liste des matériels | [lien](./Ressources/S02_ListeMateriels) | À jour (S09) |
 
 
 ## Fichiers d'installation 
@@ -21,12 +21,12 @@
 | Client | [lien](./S02/S02_Install.md) | À jour (S07) |
 | GPO | [lien](./S03/S03_User_Guide.md) | À jour (S07) |
 | Ajout d'utilisateur AD | [lien](./S03/S03_User_Guide.md) | À jour (S07) |
-| Routeur VyOS | [lien](./S04/S04_Install.md) | A jour (SO7) |
-| PfSense | [lien](./S04/S04_Install.md) | **À vérifier** (SO7) |
-| Mise en place du stockage avancé | [lien](./S05/S05_Install.md) | A jour (SO7) |
-| Serveur de fichier | [lien](./S06/S06_Install.md) | A jour (SO7) |
-| Configuration GrayLog | [lien](./S06/S06_Install.md) | A jour (SO7) |
-| Configuration PRTG | [lien](./S06/S06_Install.md) | A jour (SO7) |
+| Routeur VyOS | [lien](./S04/S04_Install.md) | A jour (S07) |
+| PfSense | [lien](./S04/S04_Install.md) | À jour (S09) |
+| Mise en place du stockage avancé | [lien](./S05/S05_Install.md) | A jour (S07) |
+| Serveur de fichier | [lien](./S06/S06_Install.md) | A jour (S07) |
+| Configuration GrayLog | [lien](./S06/S06_Install.md) | A jour (S07) |
+| Configuration PRTG | [lien](./S06/S06_Install.md) | A jour (S07) |
 | GPO Télémétrie et restriction horaire | [lien](./S06/S06_User_Guide.md) | À jour (S07) |
 | Utilisation PRTG| [lien](./S06/S06_User_Guide.md) | À jour (S07) |
 | Dashboard PfSense | [lien](./S06/S06_User_Guide.md) | À jour (S07) |
@@ -38,7 +38,11 @@
 | Serveur de mots de passe | [lien](./S07/S07_Install.md) | À jour (S08) |
 | Transfert des rôles FSMO | [lien](./S08/S08_Install.md) | À jour (S08) |
 | Rangement des PC dans les OU | [lien](./S08/S08_Install.md) | À jour (S08) |
-
+| Serveur WSUS | [lien](./S08/S08_Install.md) | À jour (S09) |
+| Serveur Téléphonie | [lien](./S08/S08_Install.md) | À jour (S09) |
+| Serveur Web | [lien](./S09/S09_Install.md) | À jour (S09) |
+| VPN avec PharmGreen | [lien](./S09/S09_Install.md) | À jour (S09) |
+| Relation d'approbation avec PharmGreen | [lien](./S09/S09_Install.md) | À jour (S09) |
 
 ## Fichiers d'utilisation pour les utilisateurs
 | Sujet | Lien | État |
@@ -179,11 +183,11 @@ Nous avons choisi iRedMail et Thunderbird pour leur Open Source et leur populari
 | Équipe   | Rôle  | Mise en place serveur WSUS | Mise en place d'un serveur FreePBX | Mise en place d'un serveur Web | VPN site à site | PARTENARIAT D'ENTREPRISE - Active Directory | PARTENARIAT D'ENTREPRISE - Stockage | 
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 | | | Principal | Principal | Secondaire | Principal | Secondaire | Optionnel |
-|  Lamine  | SM |  |  | X | X |  | X |
+|  Lamine  | SM |  |  | X |  |  | X |
 | Baudouin | Membre | X |  |  |  | X |  |
 | Charlène | Membre | |  | X | X |  | X |
 | Anthony  | PO | X | X |  |  | X | |
-| | | 75% au 27/01 | 75% au 27/01 |  | | |  |
+| | | 100% le 29/01 | 100% le 30/01 | 100% le 30/01 | 100% le 29/01 | 100% le 30/01 |  |
 
 Notre société entame un partenariat avec l'entreprise Pharmgreen.  
 
