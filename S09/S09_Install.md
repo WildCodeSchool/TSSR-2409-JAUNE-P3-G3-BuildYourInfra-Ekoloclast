@@ -107,6 +107,8 @@ Le nouveau certificat de cet utilisateur est apparu.
 
 ## Installation et configuration du serveur web Wombat
 
+### Mise en place du site interne
+
 Sur un CT Débian en 172.24.254.1 (avec une carte réseau vmbr640), entrer les commandes : 
 ```
 apt update && apt upgrade -y
@@ -123,6 +125,64 @@ Il faut les télécharger puis mettre les trois fichiers dans **/var/www/html**,
 Le site est donc accessible, uniquement en interne, à l'adresse *http://172.24.254.1*. Il est conseillé de configurer un alias DNS.  
 
 Si le site n'est pas accessible, merci de vérifier les règles de pare-feu concernant le LAN et la DMZ.  
+
+### Mise en place du site externe Ekoloclast
+
+Taper les commandes :  
+```
+# Création d'un nouveau dossier
+mkdir /var/test
+# Copie du fichier index.html
+cp /var/www/html/index.html.bak /var/test/index.html
+# Gestion des droits
+chown -R $user:$user /var/test
+chmod -R 755 /var/test
+```
+
+Modifier le fichier **/etc/apache2/ports.conf** et ajouter :
+```
+NameVirtualHost *:33888
+Listen 33888
+```  
+![ports.conf](/Ressources/S09_Ports.png)  
+
+Dans **/etc/apache2/sites-available/**, copier le fichier **OOO-default.conf** dans un nouveau fichier **test.conf**.  
+Modifier ce nouveau fichier :  
+```
+<VirtualHost *:33888>  
+    ServerAdmin webmaster@localhost  
+    DocumentRoot /var/test
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+    <Directory "/var/test">
+        Options FollowSymLinks
+        AllowOverride ALl
+        Order allow,deny
+        Allow from all
+        Require all granted
+    </Directory>
+</VirtualHost>
+```  
+
+Puis entrer les commandes ``a2ensite test``et ``systemctl reload apache2``.  
+
+Vous pouvez désormais accèder à cette page en tapant **http://ekoloclast:33888**.  
+
+Sur le pare-feu PfSense, dans "Firewall" et "NAT", créer une règle **Port Forward** :   
+- Interface : *WAN*  
+- Protocol : *TCP*  
+- Destination : *WAN address*  
+- Destination port range : *33888*  
+- Redirect target IP : "Adress or Alias" et *172.24.254.1*  
+- Redirect target port : *33888*  
+- Description : *Accès Web Extérieur*  
+
+![NAT](/Ressources/S09_NAT.png)  
+
+Vérifier qu'une règle de pare-feu dans le WAN s'est bien créé.  
+
+Vous pouvez accéder au site Ekoloclast extérieur en passant par l'adresse **httpp://10.0.0.2:33888**.  
+![Web Extérieur](/Ressources/S09_WebExt.png)  
 
 
 --- 
