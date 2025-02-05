@@ -43,6 +43,8 @@
 | Serveur Web | [lien](./S09/S09_Install.md) | À jour (S09) |
 | VPN avec PharmGreen | [lien](./S09/S09_Install.md) | À jour (S09) |
 | Relation d'approbation avec PharmGreen | [lien](./S09/S09_Install.md) | À jour (S09) |
+| Audit Windows avec PurpleKnight | [lien](.S10/S10_Install.md) | À jour (S10) |
+| Audit Linux avec Lynis | [lien](./S10/S10_Install.md) | À jour (S10) |
 
 ## Fichiers d'utilisation pour les utilisateurs
 | Sujet | Lien | État |
@@ -190,5 +192,18 @@ Nous avons choisi iRedMail et Thunderbird pour leur Open Source et leur populari
 | | | 100% le 29/01 | 100% le 30/01 | 100% le 30/01 | 100% le 29/01 | 100% le 30/01 |  |
 
 Notre société entame un partenariat avec l'entreprise Pharmgreen.  
+
+ ### Le Sprint 10 - 01/02/2025 au 07/02/2025
+
+| Équipe | Rôle  | Audit SERVEURS LINUX - Utilisation de Lynis | Audit ACTIVE DIRECTORY - Utilisation de Purple Knight  | Mise en place d'un PC d'administration | SERVEUR RADIUS - Utilisation de Free Radius | PARTENARIAT D'ENTREPRISE - Stockage | 
+| :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| | | Secondaire | Principal | Principal |  Optionnel | Optionnel |
+|  Lamine  | PO | X |  |  |  | X |
+| Baudouin | Membre |  | X |  | X |  |
+| Charlène | Membre | X |  | X |  | X |
+| Anthony  | SM |  | X |  |  | X | |
+| | | 100% le 05/02 | 100% le 05/02 | 100% le 04/02 | |  |
+
+
 
 ## 4- Améliorations possibles
