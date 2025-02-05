@@ -20,8 +20,9 @@
 3. **Exécution du scan**
     - Ouvrez **Purple Knight** en tant qu’administrateur.
     - Connectez-vous à votre **Active Directory**.
-    (Image)
+    ![PurpleKnight](/Ressources/s10_PurpleKnight_3.png)
     - Lancez un **scan** pour identifier les vulnérabilités.
 
 4. **Analyse des résultats**
      - Une fois le scan terminé, Purple Knight génère un **rapport** avec des recommandations pour corriger les vulnérabilités.
+    ![PurpleKnight](/Ressources/s10_PurpleKnight_4.png)
