@@ -204,6 +204,15 @@ Notre société entame un partenariat avec l'entreprise Pharmgreen.
 | Anthony  | SM |  | X |  |  | X | |
 | | | 100% le 05/02 | 100% le 05/02 | 100% le 04/02 | |  |
 
+ ### Le Sprint 11 - 08/02/2025 au 14/02/2025
 
+| Équipe | Rôle  |  SÉCURITÉ - Utilisation d'un IDS/IPS et d'une machine d'attaque | SERVEUR RADIUS - Utilisation de Free Radius | PARTENARIAT D'ENTREPRISE - Stockage | 
+| :--: | :--: | :--: | :--: | :--: |
+| | | Optionnel |  Optionnel | Optionnel |
+|  Lamine  | Membre | X |  |  |
+| Baudouin | PO |  | X |  |
+| Charlène | SM |  |  | X |
+| Anthony  | Membre |  | X |  |
+| | | |  |  |
 
 ## 4- Améliorations possibles
