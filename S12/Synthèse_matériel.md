@@ -9,10 +9,10 @@
 | 621 |  |  | |  |  |  |  |  |  |  |  |  |  |  
 | 622 |  |  | |  |  |  |  |  |  |  |  |  |  |  
 | 623 |  |  | |  |  |  |  |  |  |  |  |  |  |  
-| 624 |G3-Anolis  |Anolis  |VM | WindowsServer-2022-core | serveur AD |625  |  172.24.255.3/24  | 1 |  |  |  | 2 |49.15|
-| 625 |G3-Addax  |Addax  |VM |WindowsServer-2022-core|serveur AD principal|  625  |172.24.255.2/24 | 1 |  |  | |2  |39.21  |
-|  626| G3-Axolotl |Axolotl  |VM |  WindowsServer-2022-core  |serveur AD|  625|172.24.255.1/24 | 1 |  |  |  |  2|64.17  |
-|627 | G3-Fuligule |  |VM |Windowsserver2022|  serveur de fichiers| 625 |172.24.255.8/24 | 1 |  |  |  |  4| 59.25 |  
+| 624 |G3-Anolis  |Anolis  |VM | WindowsServer-2022-core | serveur AD |625  |  172.24.255.3/24  | 1 |  32|  |  | 2 |49.15|
+| 625 |G3-Addax  |Addax  |VM |WindowsServer-2022-core|serveur AD principal|  625  |172.24.255.2/24 | 1 | 32 |  | |2  |39.21  |
+|  626| G3-Axolotl |Axolotl  |VM |  WindowsServer-2022-core  |serveur AD|  625|172.24.255.1/24 | 1 | 32 |  |  |  2|64.17  |
+|627 | G3-Fuligule |  |VM |Windowsserver2022|  serveur de fichiers| 625 |172.24.255.8/24 | 1 | 32 |  |  |  4| 59.25 |  
 |  |  |  | |  |  |  |  |  |  |  |  |  |  |  
 |  |  |  | |  |  |  |  |  |  |  |  |  |  |  
 |  |  |  | |  |  |  |  |  |  |  |  |  |  |  
