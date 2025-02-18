@@ -20,4 +20,4 @@
 | 635 | G3-routeur3||VM|vyos 1.5 |Routeur |  |  |  |  |  |  |  |  |  2| 17.5 |  
 |636 | G3-Galago|Galago |VM |Debian |Serveur GLPI|625 | 172.24.255.6/24 | 1|31 | 26|88 | 2|41.74|
 |637 | G3-routeur2| |VM |vyos 1.5 |Routeur | | | | | | | |2 | 18.3|
-|639 | | | | | | | | | | | | | |
+|639 | G3-P001| |VM |Windows 10 Pro| Supervision |625 | 172.24.16.252 | | | | 8|90.5 |
