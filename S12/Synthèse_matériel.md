@@ -4,7 +4,7 @@
 | 611| Manakin | Manakin | CT|  Debian| serveur de messagerie |625|172.24.255.7/24 | 1 | 15.58 | 10.5 | 68 | 4 | 58.75 |  
 | 612 | Pangolin| Pangolin |CT |Debian  | serveur de gestion de mdp | 625 |172.24.255.5/24|  1|  15.66|  14.2|  91|  1|  15.41|  
 | 613 | Tigre | Tigre |CT | Debian |  serveur freePBX| 625 |172.24.255.11/24| 1 |9.75  | 2 |20.53  | 2 |  30|  
-|  |  |  | |  |  |  |  |  |  |  |  |  |  |  
+| 614 | Wombat | Wombat | CT |  Debian| serveur web | 625 |172.24.254.1/24|  1|  7.78|  6.63|  87.25| 1 |  5.67|  
 |  |  |  | |  |  |  |  |  |  |  |  |  |  |  
 |  |  |  | |  |  |  |  |  |  |  |  |  |  |  
 |  |  |  | |  |  |  |  |  |  |  |  |  |  |  
