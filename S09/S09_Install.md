@@ -261,15 +261,15 @@ Dans FreePBX, accédez à Admin > User Management > Directories et ajoutez un no
 
 Nom : AD_LDAP
 
-Serveur : ldap://serv_local.eko.lan
+Serveur : ldap://addax.eko.lan
 
 Port : 389 (ou 636 pour LDAPS)
 
 Base DN : DC=eko,DC=lan
 
-Bind DN : CN=ldapuser,CN=Users,DC=eko,DC=lan
+Bind DN : CN=admin.turchi,CN=Administrateus,DC=eko,DC=lan
 
-Mot de passe : MotDePasseLDAP
+Mot de passe : Azerty1*
 
 Filtre Utilisateur : (objectClass=person)
 
