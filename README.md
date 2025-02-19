@@ -52,6 +52,8 @@
 | Connexion à un compte utilisateur| [lien](./S07/S07_UserGuide.md) | À jour (S07) |
 | Ticket d'incident | [lien](./S03/S03_User_Guide.md) | À jour (S07) |
 | Utilisation de la messagerie | [lien](./S07/S07_UserGuide.md) | À jour (S07) |
+| Utilisation du stockage partagé | [lien](.S06/S06_User_Guide.md) | À jour (S11) |
+
 
 
 
