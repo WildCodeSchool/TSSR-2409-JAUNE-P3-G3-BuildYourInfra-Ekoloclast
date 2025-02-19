@@ -52,8 +52,8 @@
 | Connexion à un compte utilisateur| [lien](./S07/S07_UserGuide.md) | À jour (S07) |
 | Ticket d'incident | [lien](./S03/S03_User_Guide.md) | À jour (S07) |
 | Utilisation de la messagerie | [lien](./S07/S07_UserGuide.md) | À jour (S07) |
-| Utilisation du stockage partagé | [lien](.S06/S06_User_Guide.md) | À jour (S11) |
-
+| Utilisation du stockage partagé | [lien](./S06/S06_User_Guide.md) | À jour (S11) |
+| Utilisation du serveur web | [lien](./S09/S09_UserGuide.md) | À jour (S11) |
 
 
 
@@ -217,4 +217,14 @@ Notre société entame un partenariat avec l'entreprise Pharmgreen.
 | Anthony  | Membre |  | X |  |
 | | | |  |  |
 
+### Le Sprint 12 - 15/02/2025 au 21/02/2025
+Ce sprint est destiné à finaliser ce projet. Les derniers objectifs ne seront pas réalisés.  
+
 ## 4- Améliorations possibles
+
+Nous voyons beaucoup d'améliorations possible :  
+- retablir le serveur de mots de passe
+- finir les trois objectifs restants (IDS, Radius et stockage partagé avec Pharmgreen)
+- augmenter le score d'audit
+- finir le VPN d'accès à distance
+- améliorer le syteème GLPI (template)   
