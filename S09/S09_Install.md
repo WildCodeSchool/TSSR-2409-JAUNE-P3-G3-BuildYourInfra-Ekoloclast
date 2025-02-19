@@ -209,3 +209,83 @@ Pour vérifier le bon fonctionnement, se connecter avec un utilisateur de Pharmg
 La relation d'approbation permet de visualiser et gérer l'AD de Pharmgreen. On peut même ajouter la forêt à la console *Group Policy Management*.   
 ![GPO](/Ressources/S09_GPOPharm.png)  
 
+## installation Freepbx
+
+
+1. Installation des Dépendances
+
+apt update && apt upgrade -y
+apt install -y wget curl nano sudo \
+    gnupg2 network-manager libjansson-dev \
+    build-essential git mariadb-server \
+    mariadb-client apache2 php php-cli php-mbstring php-xml php-mysql php-curl \
+    php-gd php-zip php-bcmath php-soap sox ffmpeg lame
+
+2. Installation d'Asterisk
+
+cd /usr/src
+wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-20-current.tar.gz
+tar xvf asterisk-20-current.tar.gz
+cd asterisk-20.*/
+contrib/scripts/install_prereq install
+./configure && make menuselect
+make -j$(nproc)
+make install
+make samples
+make config
+ldconfig
+systemctl enable asterisk
+
+3. Installation de FreePBX
+
+cd /usr/src
+wget http://mirror.freepbx.org/modules/packages/freepbx/freepbx-16.0-latest.tgz
+tar xvf freepbx-16.0-latest.tgz
+cd freepbx
+./install -n
+
+4. Configuration du Service FreePBX
+
+chown -R asterisk:asterisk /var/lib/asterisk /var/www/html/
+chown -R asterisk:asterisk /etc/asterisk /var/log/asterisk /var/spool/asterisk
+systemctl restart asterisk
+systemctl enable apache2 mariadb asterisk
+
+5. Configuration de l'Intégration LDAP avec Active Directory
+
+5.1. Installer et Activer le Module LDAP
+
+Dans FreePBX, accédez à Admin > User Management > Directories et ajoutez un nouveau LDAP Directory.
+
+5.2. Paramètres de Connexion LDAP
+
+Nom : AD_LDAP
+
+Serveur : ldap://serv_local.eko.lan
+
+Port : 389 (ou 636 pour LDAPS)
+
+Base DN : DC=eko,DC=lan
+
+Bind DN : CN=ldapuser,CN=Users,DC=eko,DC=lan
+
+Mot de passe : MotDePasseLDAP
+
+Filtre Utilisateur : (objectClass=person)
+
+Attributs d'Authentification : sAMAccountName
+
+5.3. Tester et Appliquer la Configuration
+
+Cliquez sur Test pour valider la connexion.
+
+Sauvegardez et appliquez.
+
+Dans User Management, synchronisez les utilisateurs AD.
+
+6. Accès à FreePBX
+
+Accédez à l'interface Web :
+
+http://172.24.255.11/admin
+
