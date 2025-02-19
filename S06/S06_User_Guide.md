@@ -1,5 +1,12 @@
 # Ekoloclast
 
+
+## Utilisation du stockage partagé
+À l'ouverture de votre session, vous trouverez trois raccourcis : un pour le dossier partagé de votre département, un pour le dossier partagé de votre service et un pour votre dossier individuel. 
+Il est fortement conseillé de stocker vos données sur ces trois dossiers, tout en respectant la chartee informatique de Ekoloclast. Votre limite de stockage de votre dossier individuel est de 2Go. En cas de problème d'accès, merci de remonter un ticket au service Informatique.
+![Dossier Bureau](/Ressources/S06_DossierBureau.png)  
+
+
 ## Désactivation des services collecteurs de données et télémétrie.
 
 **Sur le Windows Serveur 2022 :**  
