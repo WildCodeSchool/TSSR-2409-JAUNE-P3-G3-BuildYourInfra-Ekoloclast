@@ -18,5 +18,5 @@
 | 634 | G3-P0020 |  P0020|VM |Windows 10 Pro| PC client |  625|172.24.16.50 | 1 |50  |  |  |  |  |  
 | 635 | G3-routeur3||VM|vyos 1.5 |Routeur |  |  |  |  3.7 | 1.8 | 51 |  2| 17.5 |  
 |636 | G3-Galago|Galago |VM |Debian |Serveur GLPI|625 | 172.24.255.6/24 | 1|31 | 26|88 | 2|41.74|
-|637 | G3-routeur2| |VM |vyos 1.5 |Routeur | | | | 3.7|1.8 | 51| 2|18.3 |
+|637 | G3-routeur2| vyos |VM |vyos 1.5 |Routeur | | | | 3.7|1.8 | 51| 2|18.3 |
 |639 | G3-P001|P0001 |VM |Windows 10 Pro| Supervision |625 | 172.24.16.252 | 1| 49,4|11.7 |23|8|90.5 |
