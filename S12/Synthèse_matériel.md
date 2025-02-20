@@ -15,7 +15,7 @@
 | 628 |G3-Saola  |Saola  |VM |Debian  |serveur de sauvegarde  |625  |172.24.255.4/24 | 1 |32  |26  | 89 |  4| 39 |  
 |  629| G3-Wallaby | Wallaby |VM | Windowsserver2022 | Serveur WSUS | 625 |172.24.255.4/24| 1 | 32 |  |  | 4 |  60.86|  
 | 630 |G3-P0655  |  | VM| Windows 10 Pro | PC client |625  |  172.24.2.50   |1  |50  | 5 |10  | 8 | 90.93 |
-| 634 | G3-P0020 |  | |Windows 10 Pro| PC client |  625|172.24.16.50 | 1 |50  |  |  |  |  |  
+| 634 | G3-P0020 |  |VM |Windows 10 Pro| PC client |  625|172.24.16.50 | 1 |50  |  |  |  |  |  
 | 635 | G3-routeur3||VM|vyos 1.5 |Routeur |  |  |  |  |  |  |  |  |  2| 17.5 |  
 |636 | G3-Galago|Galago |VM |Debian |Serveur GLPI|625 | 172.24.255.6/24 | 1|31 | 26|88 | 2|41.74|
 |637 | G3-routeur2| |VM |vyos 1.5 |Routeur | | | | | | | 2|18.3 |
