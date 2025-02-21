@@ -11,7 +11,7 @@
 | 624 |G3-Anolis  |Anolis  |VM | WindowsServer-2022-core | serveur AD (SCHEMA MASTER)|625  |  172.24.255.3/24  | 1 |  32|  |  | 2 |49.15|
 | 625 |G3-Addax  |Addax  |VM |WindowsServer-2022|serveur AD principal|  625  |172.24.255.2/24 | 1 | 32 |  | |2  |39.21  |
 |  626| G3-Axolotl |Axolotl  |VM |  WindowsServer-2022-core  |serveur AD (RID MASTER)  |625|172.24.255.1/24 | 1 | 32 |  |  |  2|64.17  |
-|627 | G3-Fuligule |  |VM |Windowsserver2022|  serveur de fichiers| 625 |172.24.255.8/24 | 1 | 32 |  |  |  4| 59.25 |  
+|627 | G3-Fuligule | Fuligule |VM |Windowsserver2022|  serveur de fichiers| 625 |172.24.255.8/24 | 1 | 32 |  |  |  4| 59.25 |  
 | 628 |G3-Saola  |Saola  |VM |Debian  |serveur de sauvegarde  |625  |172.24.255.4/24 | 1 |32  |26  | 89 |  4| 39 |  
 |  629| G3-Wallaby | Wallaby |VM | Windowsserver2022 | Serveur WSUS | 625 |172.24.255.4/24| 1 | 32 |  |  | 4 |  60.86|  
 | 630 |G3-P0655  |  P0655| VM| Windows 10 Pro | PC client |625  |  172.24.2.50   |1  |50  | 5 |10  | 8 | 90.93 |
