@@ -8,8 +8,8 @@
 | 621 |G3-PfSense-Backup|  | |  |  |  |  |  |  |  |  |  |  |  
 | 622 |G3-routeur2-Backup  |  | |  |  |  |  |  |  |  |  |  |  |  
 | 623 |G3-routeur3-Backup  |  | |  |  |  |  |  |  |  |  |  |  |  
-| 624 |G3-Anolis  |Anolis  |VM | WindowsServer-2022-core | serveur AD (SCHEMA MASTER)|625  |  172.24.255.3/24  | 1 |  32|  |  | 2 |49.15|
-| 625 |G3-Addax  |Addax  |VM |WindowsServer-2022|serveur AD principal|  625  |172.24.255.2/24 | 1 | 32 |  | |2  |39.21  |
+| 624 |G3-Anolis  |Anolis  |VM | WindowsServer-2022-core | serveur AD (SCHEMA MASTER)|625  |  172.24.255.3/24  | 1 |  32| 19.7 | 41.5 | 2 |49.15|
+| 625 |G3-Addax  |Addax  |VM |WindowsServer-2022|serveur AD principal|  625  |172.24.255.2/24 | 1 | 32 | 18 | 56|2  |39.21  |
 |  626| G3-Axolotl |Axolotl  |VM |  WindowsServer-2022-core  |serveur AD (RID MASTER)  |625|172.24.255.1/24 | 1 | 31.3 |14.5  | 46.3 |  2|64.17  |
 |627 | G3-Fuligule | Fuligule |VM |Windowsserver2022|  serveur de fichiers| 625 |172.24.255.8/24 | 1 | 31.3 |13.8  |  44|  4| 59.25 |  
 | 628 |G3-Saola  |Saola  |VM |Debian  |serveur de sauvegarde  |625  |172.24.255.4/24 | 1 |32  |26  | 89 |  4| 39 |  
