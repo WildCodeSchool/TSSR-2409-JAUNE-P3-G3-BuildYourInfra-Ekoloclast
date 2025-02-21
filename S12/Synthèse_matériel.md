@@ -11,11 +11,11 @@
 | 624 |G3-Anolis  |Anolis  |VM | WindowsServer-2022-core | serveur AD (SCHEMA MASTER)|625  |  172.24.255.3/24  | 1 |  32|  |  | 2 |49.15|
 | 625 |G3-Addax  |Addax  |VM |WindowsServer-2022|serveur AD principal|  625  |172.24.255.2/24 | 1 | 32 |  | |2  |39.21  |
 |  626| G3-Axolotl |Axolotl  |VM |  WindowsServer-2022-core  |serveur AD (RID MASTER)  |625|172.24.255.1/24 | 1 | 32 |  |  |  2|64.17  |
-|627 | G3-Fuligule | Fuligule |VM |Windowsserver2022|  serveur de fichiers| 625 |172.24.255.8/24 | 1 | 32 |  |  |  4| 59.25 |  
+|627 | G3-Fuligule | Fuligule |VM |Windowsserver2022|  serveur de fichiers| 625 |172.24.255.8/24 | 1 | 31.3 |13.8  |  44|  4| 59.25 |  
 | 628 |G3-Saola  |Saola  |VM |Debian  |serveur de sauvegarde  |625  |172.24.255.4/24 | 1 |32  |26  | 89 |  4| 39 |  
-|  629| G3-Wallaby | Wallaby |VM | Windowsserver2022 | Serveur WSUS | 625 |172.24.255.4/24| 1 | 32 |  |  | 4 |  60.86|  
+|  629| G3-Wallaby | Wallaby |VM | Windowsserver2022 | Serveur WSUS | 625 |172.24.255.4/24| 1 | 32 |15  |47  | 4 |  60.86|  
 | 630 |G3-P0655  |  P0655| VM| Windows 10 Pro | PC client |625  |  172.24.2.50   |1  |50  | 5 |10  | 8 | 90.93 |
-| 634 | G3-P0020 |  P0020|VM |Windows 10 Pro| PC client |  625|172.24.16.50 | 1 |50  |  |  |  |  |  
+| 634 | G3-P0020 |  P0020|VM |Windows 10 Pro| PC client |  625|172.24.16.50 | 1 |50  |  |  | 8 | 90.58 |  
 | 635 | G3-routeur3|vyos|VM|vyos 1.5 |Routeur ||172.24.X.253(X allant de à 1 à 9),10.0.1.6) |  |  1|  3.7 | 1.8 | 51 |  2| 17.5 |  
 |636 | G3-Galago|Galago |VM |Debian |Serveur GLPI|625 | 172.24.255.6/24 | 1|31 | 26|88 | 2|41.74|
 |637 | G3-routeur2| vyos |VM |vyos 1.5 |Routeur ||10.0.1.1,10.0.1.5,172.24.255.253/24,172.24.16.253/24| | 1| 3.7|1.8 | 51| 2|18.3 |
