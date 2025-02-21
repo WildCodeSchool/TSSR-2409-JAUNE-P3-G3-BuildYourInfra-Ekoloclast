@@ -5,9 +5,9 @@
  | 613 | Tigre | Tigre |CT | Debian |  serveur de téléphonie| 625 |172.24.255.11/24| 1 |9.75  | 2 |20.53  | 2 |  30|  
 | 614 | Wombat | Wombat | CT |  Debian| serveur web | 625 |172.24.254.1/24|  1|  7.78|  6.63|  87.25| 1 |  5.67|  
 |  620|  G3-PfSense | PfSense | VM| FreeBSD | Pare-feu| 1,625,640 |10.0.0.2/30,172.24.50.2/30, 172.24.254.254/24 | 1 | 7.4 | 6.5 |88  |  2|  45.32|  
-| 621 |  |  | |  |  |  |  |  |  |  |  |  |  |  
-| 622 |  |  | |  |  |  |  |  |  |  |  |  |  |  
-| 623 |  |  | |  |  |  |  |  |  |  |  |  |  |  
+| 621 |G3-PfSense-Backup|  | |  |  |  |  |  |  |  |  |  |  |  
+| 622 |G3-routeur2-Backup  |  | |  |  |  |  |  |  |  |  |  |  |  
+| 623 |G3-routeur3-Backup  |  | |  |  |  |  |  |  |  |  |  |  |  
 | 624 |G3-Anolis  |Anolis  |VM | WindowsServer-2022-core | serveur AD (SCHEMA MASTER)|625  |  172.24.255.3/24  | 1 |  32|  |  | 2 |49.15|
 | 625 |G3-Addax  |Addax  |VM |WindowsServer-2022|serveur AD principal|  625  |172.24.255.2/24 | 1 | 32 |  | |2  |39.21  |
 |  626| G3-Axolotl |Axolotl  |VM |  WindowsServer-2022-core  |serveur AD (RID MASTER)  |625|172.24.255.1/24 | 1 | 32 |  |  |  2|64.17  |
